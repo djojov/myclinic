@@ -21,7 +21,6 @@ namespace DataLayer.Repositories
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
-                connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -48,7 +47,7 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE Patients SET first_name=@firstName,last_name=@lastName,personal_number=@personalNumber,health_insurance_number=@HINumber,date_of_birth=@dob,place_of_birth=@pob,phone_number=@phoneNumber,weight=@weight,height=@height";
+                string query = "UPDATE Patients SET first_name=@firstName,last_name=@lastName,personal_number=@personalNumber,health_insurance_number=@HINumber,date_of_birth=@dob,place_of_birth=@pob,phone_number=@phoneNumber,weight=@weight,height=@height WHERE id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@firstName", patient.FirstName);
                 command.Parameters.AddWithValue("@lastName", patient.LastName );
@@ -59,6 +58,7 @@ namespace DataLayer.Repositories
                 command.Parameters.AddWithValue("@phoneNumber", patient.PhoneNumber);
                 command.Parameters.AddWithValue("@weight", patient.Weight);
                 command.Parameters.AddWithValue("@height", patient.Height);
+                command.Parameters.AddWithValue("@height", patient.Id);
 
                 connection.Open();
                 int rowsUpdated;

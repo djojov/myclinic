@@ -21,7 +21,6 @@ namespace DataLayer
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
-                connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
