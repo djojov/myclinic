@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Repositories
 {
-    class DoctorRepository
+    public class DoctorRepository
     {
         string connectionString = Constants.ConnectionString;
 
