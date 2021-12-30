@@ -58,7 +58,7 @@ namespace DataLayer.Repositories
                 command.Parameters.AddWithValue("@phoneNumber", patient.PhoneNumber);
                 command.Parameters.AddWithValue("@weight", patient.Weight);
                 command.Parameters.AddWithValue("@height", patient.Height);
-                command.Parameters.AddWithValue("@height", patient.Id);
+                command.Parameters.AddWithValue("@id", patient.Id);
 
                 connection.Open();
                 int rowsUpdated;
