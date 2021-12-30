@@ -51,7 +51,21 @@ namespace DataLayer
             {
                 string query = "UPDATE DOCTORS SET status=@status,first_name=@firstName,last_name=@lastName,personal_number=@personalNumber,phone_number=@phoneNumber,date_employed=@dateEmployed,specialization=@specialization,department=@department,email=@email,password=@password";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@status", doc.Status);
+              
+                connection.Open();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
+
+            }
+        }
+        public int InsertDoctor(Doctor doc)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "INSERT INTO DOCTORS (status,first_name,last_name,personal_number,phone_number,date_employed,specialization,department,email,password,1) VALUES(1,@firstName,@lastName,@personalNumber,@phoneNumber,@dateEmployed,@specialization,@department,@email,@password)";
+                SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@firstName", doc.FirstName);
                 command.Parameters.AddWithValue("@lastName", doc.LastName);
                 command.Parameters.AddWithValue("@personalNumber", doc.PersonalNumber);
@@ -63,7 +77,10 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@password", doc.Password);
 
                 connection.Open();
-                return command.ExecuteNonQuery();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
             }
         }
     }
