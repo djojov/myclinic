@@ -61,7 +61,10 @@ namespace DataLayer.Repositories
                 command.Parameters.AddWithValue("@height", patient.Height);
 
                 connection.Open();
-                return command.ExecuteNonQuery();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
             }
         }
 
@@ -83,7 +86,10 @@ namespace DataLayer.Repositories
                 command.Parameters.AddWithValue("@height", patient.Height);
 
                 connection.Open();
-                return command.ExecuteNonQuery();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
             }
         }
     }
