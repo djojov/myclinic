@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Models
 {
-    class Doctor
+    public class Doctor
     {
         public int Id { get; set; }
         public bool Status{ get; set; }
