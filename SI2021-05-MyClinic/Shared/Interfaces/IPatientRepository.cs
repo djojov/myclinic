@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-    interface IPatientRepository
+    public interface IPatientRepository
     {
         List<string> GetReportData(int id);
         int UpdateSelf(Patient patient);
