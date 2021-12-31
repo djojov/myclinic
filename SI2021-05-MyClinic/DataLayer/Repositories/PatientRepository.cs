@@ -1,4 +1,5 @@
-﻿using Shared.Models;
+﻿using Shared.Interfaces;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Repositories
 {
-    public class PatientRepository
+    public class PatientRepository : IPatientRepository
     {
         string connectionString = Constants.ConnectionString;
 
