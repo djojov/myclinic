@@ -18,7 +18,7 @@ namespace DataLayer.Repositories
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 List<string> ListOfDiagnosis = new List<string>();
-                string query = "SELECT d.first_name, d.last_name,r.date_admitted,diagnosis FROM patients p join reports r on p.id=r.patient_id JOIN doctors d on d.id=r.doctor_id WHERE id=@id";
+                string query = "SELECT d.first_name, d.last_name,r.date_admitted,diagnosis FROM patients p join reports r on p.id=r.patient_id JOIN doctors d on d.id=r.doctor_id WHERE patient_id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@id", id);
 
