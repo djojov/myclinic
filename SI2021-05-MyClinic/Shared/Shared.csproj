@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Interfaces\IAdminBusiness.cs" />
     <Compile Include="Interfaces\IAdminRepository.cs" />
+    <Compile Include="Interfaces\IDoctorBusiness.cs" />
     <Compile Include="Interfaces\IDoctorRepository.cs" />
     <Compile Include="Interfaces\IPatientBusiness.cs" />
     <Compile Include="Interfaces\IPatientRepository.cs" />
