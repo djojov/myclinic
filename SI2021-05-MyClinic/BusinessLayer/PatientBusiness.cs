@@ -35,5 +35,30 @@ namespace BusinessLayer
                 return "Neuspešno ažuriranje, došlo je do greške!";
             }
         }
+        public string CalculateBMI(string weight, string height)
+        {
+            float bmi = this.patientRepository.CalculateBMI(weight,height);
+
+            if (bmi > 0 && bmi < 18.5)
+            {
+                return "Vas stepen uhranjenosti je slab!";
+            }
+            else if(bmi > 18.5 && bmi < 25)
+            {
+                return "Vas stepen uhranjenosti je normalan!";
+            }
+            else if (bmi > 25 && bmi < 30)
+            {
+                return "Vas stepen uhranjenosti je prekomeren!";
+            }
+            else if (bmi > 30)
+            {
+                return "Vas stepen uhranjenosti je gojazan!";
+            }
+            else
+            {
+                return "Nepravilno uneti podaci!";
+            }
+        }
     }
 }

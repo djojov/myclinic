@@ -11,5 +11,6 @@ namespace Shared.Interfaces
     {
         List<string> GetReportData(int id);
         string UpdateSelf(Patient patient);
+        string CalculateBMI(string weight, string height);
     }
 }
