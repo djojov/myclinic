@@ -12,5 +12,6 @@ namespace Shared.Interfaces
         List<string> GetReportData(int id);
         int UpdateSelf(Patient patient);
         Patient GetPatient(string email, string password);
+        float CalculateBMI(string weight, string height);
     }
 }

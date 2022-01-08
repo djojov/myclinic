@@ -85,5 +85,13 @@ namespace DataLayer.Repositories
                 return patient;
             }
         }
+        public float CalculateBMI(string weight, string height)
+        {
+            int w = Convert.ToInt32(weight);
+            int h = Convert.ToInt32(height);
+
+            float bmi = (float)w / h / h * 10000;
+            return bmi;
+        }
     }
 }
