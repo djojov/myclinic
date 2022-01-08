@@ -93,5 +93,55 @@ namespace DataLayer.Repositories
                 return rowsUpdated;
             }
         }
+        public Doctor GetDoctor(string email, string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * from Doctors WHERE email=@email AND password=@password";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@password", password);
+                connection.Open();
+                Doctor doc = new Doctor();
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                  
+                    doc.Id = reader.GetInt32(0);
+                    doc.Status = reader.GetBoolean(1);
+                    doc.FirstName = reader.GetString(2);
+                    doc.LastName = reader.GetString(3);
+                    doc.PersonalNumber = reader.GetString(4);
+                    doc.PhoneNumber = reader.GetString(5);
+                    doc.DateEmployed = reader.GetDateTime(6);
+                    doc.Specialization = reader.GetString(7);
+                    doc.Department = reader.GetString(8);
+                    doc.Email = reader.GetString(9);
+                    doc.Password = reader.GetString(10);
+                }
+                reader.Close();
+                connection.Close();
+                return doc;
+            }
+        }
+        public int InsertReport(int doctor_id, int patient_id, string diagnosis)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "INSERT INTO REPORTS VALUES(@date,@doc_id,@patient_id,@diagnosis)";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@date", DateTime.Now);
+                command.Parameters.AddWithValue("@doc_id", doctor_id);
+                command.Parameters.AddWithValue("@patient_id", patient_id);
+                command.Parameters.AddWithValue("@diagnosis", diagnosis);
+
+                connection.Open();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
+            }
+        }
     }
 }

@@ -94,5 +94,30 @@ namespace DataLayer
                 return rowsUpdated;
             }
         }
+        public Admin GetAdmin(string email, string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * from DOCTORS WHERE email=@email AND password=@password";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@password", password);
+                connection.Open();
+                Admin admin = new Admin();
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    admin.Id = reader.GetInt32(0);
+                    admin.FirstName = reader.GetString(1);
+                    admin.LastName = reader.GetString(2);
+                    admin.Email = reader.GetString(3);
+                    admin.Password = reader.GetString(4);
+                }
+                reader.Close();
+                connection.Close();
+                return admin;
+            }
+        }
     }
 }
