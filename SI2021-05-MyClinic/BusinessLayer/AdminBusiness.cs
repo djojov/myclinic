@@ -27,11 +27,11 @@ namespace BusinessLayer
 
             if (rowsAffected > 0)
             {
-                return "Uspešno ste uneli doktora u bazu!";
+                return "Doctor successfully added!";
             }
             else
             {
-                return "Neuspešan unos doktora, došlo je do greške!";
+                return "Doctor insertion failed!";
             }
         }
         public string UpdateDoctor(Doctor doctor)
@@ -40,12 +40,17 @@ namespace BusinessLayer
 
             if (rowsAffected > 0)
             {
-                return "Podaci doktora su uspešno ažurirani!";
+                return "Doctor successfully updated!";
             }
             else
             {
-                return "Neuspešno ažuriranje doktora, došlo je do greške!";
+                return "Failed to update doctor!";
             }
+        }
+
+        public Admin GetAdmin(string email, string password)
+        {
+            return this.adminRepository.GetAdmin(email,password);
         }
     }
 }

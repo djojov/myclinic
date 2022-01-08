@@ -12,5 +12,6 @@ namespace Shared.Interfaces
         List<Doctor> GetAllDoctors();
         string InsertDoctor(Doctor doc);
         string UpdateDoctor(Doctor doc);
+        Admin GetAdmin(string email, string password);
     }
 }
