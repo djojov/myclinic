@@ -18,7 +18,7 @@ namespace DataLayer
             List<Doctor> ListOfDoctors = new List<Doctor>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * from DOCTORS";
+                string query = "SELECT * FROM DOCTORS";
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
@@ -98,7 +98,7 @@ namespace DataLayer
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * from DOCTORS WHERE email=@email AND password=@password";
+                string query = "SELECT * FROM ADMINS WHERE email=@email AND password=@password";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@email", email);
                 command.Parameters.AddWithValue("@password", password);

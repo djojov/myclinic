@@ -18,7 +18,7 @@ namespace DataLayer.Repositories
             List<Patient> ListofPatients = new List<Patient>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * from PATIENTS";
+                string query = "SELECT * FROM PATIENTS";
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
@@ -48,7 +48,7 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE Patients SET first_name=@firstName,last_name=@lastName,personal_number=@personalNumber,health_insurance_number=@HINumber,date_of_birth=@dob,place_of_birth=@pob,phone_number=@phoneNumber,weight=@weight,height=@height WHERE id=@id";
+                string query = "UPDATE PATIENTS SET first_name=@firstName,last_name=@lastName,personal_number=@personalNumber,health_insurance_number=@HINumber,date_of_birth=@dob,place_of_birth=@pob,phone_number=@phoneNumber,weight=@weight,height=@height WHERE id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@firstName", patient.FirstName);
                 command.Parameters.AddWithValue("@lastName", patient.LastName );
@@ -97,7 +97,7 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * from Doctors WHERE email=@email AND password=@password";
+                string query = "SELECT * FROM DOCTORS WHERE email=@email AND password=@password";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@email", email);
                 command.Parameters.AddWithValue("@password", password);
