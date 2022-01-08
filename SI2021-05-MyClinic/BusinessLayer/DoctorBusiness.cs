@@ -27,11 +27,11 @@ namespace BusinessLayer
 
             if (rowsAffected > 0)
             {
-                return "Uspešno ste uneli pacijenta u bazu!";
+                return "Patient successfully added!";
             }
             else
             {
-                return "Neuspešan unos pacijenta, došlo je do greške!";
+                return "Patient insertion failed!";
             }
         }
         public string UpdatePatient(Patient patient)
@@ -40,11 +40,11 @@ namespace BusinessLayer
 
             if (rowsAffected > 0)
             {
-                return "Podaci pacijenta su uspešno ažurirani!";
+                return "Patient successfully updated!";
             }
             else
             {
-                return "Neuspešno ažuriranje pacijenta, došlo je do greške!";
+                return "Failed to update patient!";
             }
         }
         public string InsertReport(int doctor_id, int patient_id, string diagnosis)
@@ -53,11 +53,11 @@ namespace BusinessLayer
 
             if (rowsAffected > 0)
             {
-                return "Uspešno ste dodali novi pregled u bazu!";
+                return "Report successfully added!";
             }
             else
             {
-                return "Neuspešno dodavanje pregleda u bazu!";
+                return "Failed to add report!";
             }
         }
         public Doctor GetDoctor(string email, string password)
