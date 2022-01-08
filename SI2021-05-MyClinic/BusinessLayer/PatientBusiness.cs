@@ -28,11 +28,11 @@ namespace BusinessLayer
 
             if (rowsAffected > 0)
             {
-                return "Podaci su uspešno ažurirani!";
+                return "Successfully updated!";
             }
             else
             {
-                return "Neuspešno ažuriranje, došlo je do greške!";
+                return "Update failed!";
             }
         }
         public string CalculateBMI(string weight, string height)
@@ -41,23 +41,23 @@ namespace BusinessLayer
 
             if (bmi > 0 && bmi < 18.5)
             {
-                return "Vas stepen uhranjenosti je slab!";
+                return "Underweight!";
             }
             else if(bmi > 18.5 && bmi < 25)
             {
-                return "Vas stepen uhranjenosti je normalan!";
+                return "Healthy!";
             }
             else if (bmi > 25 && bmi < 30)
             {
-                return "Vas stepen uhranjenosti je prekomeren!";
+                return "Overweight!";
             }
             else if (bmi > 30)
             {
-                return "Vas stepen uhranjenosti je gojazan!";
+                return "Obese!";
             }
             else
             {
-                return "Nepravilno uneti podaci!";
+                return "Incorrect data!";
             }
         }
         public Patient GetPatient(string email, string password)
