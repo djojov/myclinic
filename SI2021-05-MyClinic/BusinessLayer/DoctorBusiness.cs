@@ -60,5 +60,9 @@ namespace BusinessLayer
                 return "Neuspešno dodavanje pregleda u bazu!";
             }
         }
+        public Doctor GetDoctor(string email, string password)
+        {
+            return this.doctorRepository.GetDoctor(email, password);
+        }
     }
 }
