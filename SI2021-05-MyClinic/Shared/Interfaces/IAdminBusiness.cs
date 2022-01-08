@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-    public interface IAdminRepository
+    public interface IAdminBusiness
     {
         List<Doctor> GetAllDoctors();
-        int UpdateDoctor(Doctor doc);
-        int InsertDoctor(Doctor doc);
+        string InsertDoctor(Doctor doc);
+        string UpdateDoctor(Doctor doc);
         Admin GetAdmin(string email, string password);
     }
 }

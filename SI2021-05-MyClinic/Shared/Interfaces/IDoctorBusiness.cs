@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-    public interface IDoctorRepository
+    public interface IDoctorBusiness
     {
         List<Patient> GetAllPatients();
-        int UpdatePatient(Patient patient);
-        int InsertPatient(Patient patient);
+        string UpdatePatient(Patient patient);
+        string InsertPatient(Patient patient);
+        string InsertReport(int doctor_id, int patient_id, string diagnosis);
         Doctor GetDoctor(string email, string password);
-        int InsertReport(int doctor_id, int patient_id, string diagnosis);
     }
 }

@@ -53,5 +53,45 @@ namespace DataLayer.Repositories
                 return rowsUpdated;
             }
         }
+        public Patient GetPatient(string email, string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * from Doctors WHERE email=@email AND password=@password";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@password", password);
+                connection.Open();
+                Patient patient = new Patient();
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    patient.Id = reader.GetInt32(0);
+                    patient.FirstName = reader.GetString(1);
+                    patient.LastName = reader.GetString(2);
+                    patient.PersonalNumber = reader.GetString(3);
+                    patient.HealthInsuranceNumber = reader.GetString(4);
+                    patient.DateOfBirth = reader.GetDateTime(5);
+                    patient.PlaceOfBirth = reader.GetString(6);
+                    patient.Email = reader.GetString(7);
+                    patient.Password = reader.GetString(8);
+                    patient.PhoneNumber = reader.GetString(9);
+                    patient.Weight = reader.GetString(10);
+                    patient.Height = reader.GetString(11);
+                }
+                reader.Close();
+                connection.Close();
+                return patient;
+            }
+        }
+        public float CalculateBMI(string weight, string height)
+        {
+            int w = Convert.ToInt32(weight);
+            int h = Convert.ToInt32(height);
+
+            float bmi = (float)w / h / h * 10000;
+            return bmi;
+        }
     }
 }

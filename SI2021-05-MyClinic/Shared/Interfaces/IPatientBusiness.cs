@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-    public interface IPatientRepository
+    public interface IPatientBusiness
     {
         List<string> GetReportData(int id);
-        int UpdateSelf(Patient patient);
+        string UpdateSelf(Patient patient);
+        string CalculateBMI(string weight, string height);
         Patient GetPatient(string email, string password);
-        float CalculateBMI(string weight, string height);
     }
 }
