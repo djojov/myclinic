@@ -12,5 +12,6 @@ namespace Shared.Interfaces
         List<Patient> GetAllPatients();
         int UpdatePatient(Patient patient);
         int InsertPatient(Patient patient);
+        Doctor GetDoctor(string email, string password);
     }
 }
