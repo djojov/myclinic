@@ -47,5 +47,18 @@ namespace BusinessLayer
                 return "Neuspešno ažuriranje pacijenta, došlo je do greške!";
             }
         }
+        public string InsertReport(int doctor_id, int patient_id, string diagnosis)
+        {
+            int rowsAffected = this.doctorRepository.InsertReport(doctor_id, patient_id, diagnosis);
+
+            if (rowsAffected > 0)
+            {
+                return "Uspešno ste dodali novi pregled u bazu!";
+            }
+            else
+            {
+                return "Neuspešno dodavanje pregleda u bazu!";
+            }
+        }
     }
 }

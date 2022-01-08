@@ -12,5 +12,6 @@ namespace Shared.Interfaces
         List<Patient> GetAllPatients();
         string UpdatePatient(Patient patient);
         string InsertPatient(Patient patient);
+        string InsertReport(int doctor_id, int patient_id, string diagnosis);
     }
 }
