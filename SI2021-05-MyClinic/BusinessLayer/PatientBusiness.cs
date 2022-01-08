@@ -60,5 +60,9 @@ namespace BusinessLayer
                 return "Nepravilno uneti podaci!";
             }
         }
+        public Patient GetPatient(string email, string password)
+        {
+            return this.patientRepository.GetPatient(email, password);
+        }
     }
 }
