@@ -48,45 +48,45 @@ CREATE TABLE REPORTS(
 );
 
 
-INSERT INTO ADMINS VALUES('Marko','Markovic','admin@myclinic.com','admin123');
+INSERT INTO ADMINS VALUES('Marko','Markovic','admin@myclinic.com','Adminadmin123@');
 
-INSERT INTO DOCTORS VALUES(1,'Uros','Milosevic','009989842','0613081758','2021-04-25',NULL,'surgical','urosmilosevic@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(1,'Marko','Petrovic','235786542','063252555','2021-04-25',NULL,'psychiatry','markopetrovic@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(1,'Dusan','Milosevic','235124778','0612223334','2021-04-25',NULL,'neurology','dusanmilosevic@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(1,'Stefan','Milic','532153288','0613456789','2021-04-25',NULL,'surgical','stefanmilic@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(1,'Bojana','Bogicevic','979945689','061122334','2021-04-25',NULL,'endocrinology','bojanabogicevic@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(1,'Djordje','Jovanovic','955655698','0683221231','2021-04-25',NULL,'cardiology','djordjejovanovic@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(1,'Veljko','Vulic','356878652','066731388','2021-04-25',NULL,'anesthetics','veljkovulic@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(1,'Petar','Stefanovic','123123458','069695858','2021-04-25',NULL,'cardiology','petarstefanovic@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(0,'Slavoljub','Nikodijevic','062228528','0668585555','2021-04-25',NULL,'surgical','slavoljubn@myclinic.com','password123',1);
-INSERT INTO DOCTORS VALUES(1,'Jovica','Nikodijevic','063328528','0667788323','2021-04-25',NULL,'urology','jovicani@myclinic.com','password123',1);
+INSERT INTO DOCTORS VALUES(1,'Uros','Milosevic','009989842','0613081758','2021-04-25','Thoracic Surgery','surgical','urosmilosevic@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(1,'Marko','Petrovic','235786542','063252555','2021-04-25','General Psychiatry','psychiatry','markopetrovic@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(1,'Dusan','Milosevic','235124778','0612223334','2021-04-25','Neurological Surgery','neurology','dusanmilosevic@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(1,'Stefan','Milic','532153288','0613456789','2021-04-25','Orthopaedic Surgery','surgical','stefanmilic@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(1,'Bojana','Bogicevic','979945689','061122334','2021-04-25','Endocrine Oncology','endocrinology','bojanabogicevic@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(1,'Djordje','Jovanovic','955655698','0683221231','2021-04-25','Electrophysiology','cardiology','djordjejovanovic@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(1,'Veljko','Vulic','356878652','066731388','2021-04-25','Intensive Care Medicine','anesthetics','veljkovulic@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(1,'Petar','Stefanovic','123123458','069695858','2021-04-25','Electrophysiology','cardiology','petarstefanovic@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(0,'Slavoljub','Nikodijevic','062228528','0668585555','2021-04-25','Thoracic Surgery','surgical','slavoljubn@myclinic.com','Password123@',1);
+INSERT INTO DOCTORS VALUES(1,'Jovica','Nikodijevic','063328528','0667788323','2021-04-25','urologic oncology','urology','jovicani@myclinic.com','Password123@',1);
 
 
-INSERT INTO PATIENTS VALUES('Gorica','Petrovic','009292111','81999896738','1999-02-03','cacak','goricap@gmail.com','mypass123','0666386338','56','169');
-INSERT INTO PATIENTS VALUES('Marko','Milutinovic','123292111','55578967381','1989-08-04','Lucani','markomil@gmail.com','mypass123','0661111112','80','187');
-INSERT INTO PATIENTS VALUES('Nenad','Simonovic','124292111','85223896738','1985-09-01','Lucani','sikin@gmail.com','mypass123','0622252255','91','185');
-INSERT INTO PATIENTS VALUES('Dejan','Nikolic','125292111','81923485738','2002-01-01','cacak','nikolicd@gmail.com','mypass123','0621313113','93','195');
-INSERT INTO PATIENTS VALUES('Milivoje','Jovic','126292111','81999366245','2005-02-07','Lucani','milijo@gmail.com','mypass123','0692323147','69','170');
-INSERT INTO PATIENTS VALUES('Zoran','Golubovic','127292111','22353896738','1984-02-24','cacak','golubzoran@gmail.com','mypass123','0685521552','80','184');
-INSERT INTO PATIENTS VALUES('Miodrag','Stojkovic','128292111','56853289752','1998-06-27','Lucani','miosto123@gmail.com','mypass123','063888122','84','189');
-INSERT INTO PATIENTS VALUES('Stojan','Milivojevic','129292111','23578652123','1966-09-03','cacak','stojancemil@gmail.com','mypass123','0646656655','78','175');
-INSERT INTO PATIENTS VALUES('Tamara','Vasilijevic','221292111','23885411238','1982-12-28','Pozega','tamarav@gmail.com','mypass123','0638765454','50','165');
-INSERT INTO PATIENTS VALUES('Tamara','Lukovic','223292111','12596823586','1970-12-30','cacak','tamaral@gmail.com','mypass123','0665999595','63','175');
-INSERT INTO PATIENTS VALUES('Ivana','Suljagic','224292111','13254672131','1977-05-07','cacak','ivanasu@gmail.com','mypass123','0613085588','62','175');
-INSERT INTO PATIENTS VALUES('Miroslav','Popovic','225292111','74512435682','1973-09-01','Lucani','mikip@gmail.com','mypass123','0644482528','95','180');
-INSERT INTO PATIENTS VALUES('Nikola','Jovic','226292111','35656856891','1988-10-02','Pozega','nikolajov@gmail.com','mypass123','0623346565','79','183');
-INSERT INTO PATIENTS VALUES('Zorica','Markovic','227292111','34652356237','1989-07-07','cacak','zoricamar@gmail.com','mypass123','0642635663','62','169');
-INSERT INTO PATIENTS VALUES('Gordana','Jelic','228292111','66435891524','2005-12-12','Uzice','gocajelic@gmail.com','mypass123','0623523366','62','171');
-INSERT INTO PATIENTS VALUES('Marko','Petrovic','229292111','31255564585','2000-06-13','cacak','markope@gmail.com','mypass123','0663561422','103','202');
-INSERT INTO PATIENTS VALUES('Nenad','Jovanovic','351292111','33233566865','2004-08-17','Uzice','nenadjova@gmail.com','mypass123','0669797652','91','190');
-INSERT INTO PATIENTS VALUES('Luka','Bogdanovic','372292111','32356533337','1992-04-25','cacak','lukabog@gmail.com','mypass123','0665329456','80','189');
-INSERT INTO PATIENTS VALUES('Filip','Arsic','009358111','66599997896','1993-11-13','cacak','filipars@gmail.com','mypass123','0627897895','70','175');
-INSERT INTO PATIENTS VALUES('Jovana','Djordjevic','002342111','3535356468','1996-03-20','Uzice','jodjo@gmail.com','mypass123','0656386338','49','160');
-INSERT INTO PATIENTS VALUES('Djordje','Rasic','04452111','1245376591','1991-09-03','cacak','djokeen@gmail.com','mypass123','0626386338','74','190');
-INSERT INTO PATIENTS VALUES('Dane','Milic','07898911','11338865956','1980-09-08','Uzice','danedane@gmail.com','mypass123','0662235338','92','185');
-INSERT INTO PATIENTS VALUES('Kristina','Milosevic','02232111','11227784659','1981-05-07','Pozega','krismil@gmail.com','mypass123','0627836338','60','175');
-INSERT INTO PATIENTS VALUES('Katarina','Sango','08882111','11334478956','1972-04-13','Uzice','katsa@gmail.com','mypass123','0699696551','59','172');
-INSERT INTO PATIENTS VALUES('Magdalena','Blagojevic','889292111','22885599643','1996-01-27','Pozega','magdablag@gmail.com','mypass123','0633693691','65','160');
+INSERT INTO PATIENTS VALUES('Gorica','Petrovic','009292111','81999896738','1999-02-03','cacak','goricap@gmail.com','Mypass123@','0666386338','56','169');
+INSERT INTO PATIENTS VALUES('Marko','Milutinovic','123292111','55578967381','1989-08-04','Lucani','markomil@gmail.com','Mypass123@','0661111112','80','187');
+INSERT INTO PATIENTS VALUES('Nenad','Simonovic','124292111','85223896738','1985-09-01','Lucani','sikin@gmail.com','Mypass123@','0622252255','91','185');
+INSERT INTO PATIENTS VALUES('Dejan','Nikolic','125292111','81923485738','2002-01-01','cacak','nikolicd@gmail.com','Mypass123@','0621313113','93','195');
+INSERT INTO PATIENTS VALUES('Milivoje','Jovic','126292111','81999366245','2005-02-07','Lucani','milijo@gmail.com','Mypass123@','0692323147','69','170');
+INSERT INTO PATIENTS VALUES('Zoran','Golubovic','127292111','22353896738','1984-02-24','cacak','golubzoran@gmail.com','Mypass123@','0685521552','80','184');
+INSERT INTO PATIENTS VALUES('Miodrag','Stojkovic','128292111','56853289752','1998-06-27','Lucani','miosto123@gmail.com','Mypass123@','063888122','84','189');
+INSERT INTO PATIENTS VALUES('Stojan','Milivojevic','129292111','23578652123','1966-09-03','cacak','stojancemil@gmail.com','Mypass123@','0646656655','78','175');
+INSERT INTO PATIENTS VALUES('Tamara','Vasilijevic','221292111','23885411238','1982-12-28','Pozega','tamarav@gmail.com','Mypass123@','0638765454','50','165');
+INSERT INTO PATIENTS VALUES('Tamara','Lukovic','223292111','12596823586','1970-12-30','cacak','tamaral@gmail.com','Mypass123@','0665999595','63','175');
+INSERT INTO PATIENTS VALUES('Ivana','Suljagic','224292111','13254672131','1977-05-07','cacak','ivanasu@gmail.com','Mypass123@','0613085588','62','175');
+INSERT INTO PATIENTS VALUES('Miroslav','Popovic','225292111','74512435682','1973-09-01','Lucani','mikip@gmail.com','Mypass123@','0644482528','95','180');
+INSERT INTO PATIENTS VALUES('Nikola','Jovic','226292111','35656856891','1988-10-02','Pozega','nikolajov@gmail.com','Mypass123@','0623346565','79','183');
+INSERT INTO PATIENTS VALUES('Zorica','Markovic','227292111','34652356237','1989-07-07','cacak','zoricamar@gmail.com','Mypass123@','0642635663','62','169');
+INSERT INTO PATIENTS VALUES('Gordana','Jelic','228292111','66435891524','2005-12-12','Uzice','gocajelic@gmail.com','Mypass123@','0623523366','62','171');
+INSERT INTO PATIENTS VALUES('Marko','Petrovic','229292111','31255564585','2000-06-13','cacak','markope@gmail.com','Mypass123@','0663561422','103','202');
+INSERT INTO PATIENTS VALUES('Nenad','Jovanovic','351292111','33233566865','2004-08-17','Uzice','nenadjova@gmail.com','Mypass123@','0669797652','91','190');
+INSERT INTO PATIENTS VALUES('Luka','Bogdanovic','372292111','32356533337','1992-04-25','cacak','lukabog@gmail.com','Mypass123@','0665329456','80','189');
+INSERT INTO PATIENTS VALUES('Filip','Arsic','009358111','66599997896','1993-11-13','cacak','filipars@gmail.com','Mypass123@','0627897895','70','175');
+INSERT INTO PATIENTS VALUES('Jovana','Djordjevic','002342111','3535356468','1996-03-20','Uzice','jodjo@gmail.com','Mypass123@','0656386338','49','160');
+INSERT INTO PATIENTS VALUES('Djordje','Rasic','04452111','1245376591','1991-09-03','cacak','djokeen@gmail.com','Mypass123@','0626386338','74','190');
+INSERT INTO PATIENTS VALUES('Dane','Milic','07898911','11338865956','1980-09-08','Uzice','danedane@gmail.com','Mypass123@','0662235338','92','185');
+INSERT INTO PATIENTS VALUES('Kristina','Milosevic','02232111','11227784659','1981-05-07','Pozega','krismil@gmail.com','Mypass123@','0627836338','60','175');
+INSERT INTO PATIENTS VALUES('Katarina','Sango','08882111','11334478956','1972-04-13','Uzice','katsa@gmail.com','Mypass123@','0699696551','59','172');
+INSERT INTO PATIENTS VALUES('Magdalena','Blagojevic','889292111','22885599643','1996-01-27','Pozega','magdablag@gmail.com','Mypass123@','0633693691','65','160');
 
 
 INSERT INTO  REPORTS VALUES ('2021-06-12 12:00:00',6,1,'Arrhythmia');
