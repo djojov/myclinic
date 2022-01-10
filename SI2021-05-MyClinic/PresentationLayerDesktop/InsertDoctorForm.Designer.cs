@@ -203,6 +203,7 @@ namespace PresentationLayerDesktop
             this.button_Insert.TabIndex = 19;
             this.button_Insert.Text = "Insert";
             this.button_Insert.UseVisualStyleBackColor = true;
+            this.button_Insert.Click += new System.EventHandler(this.button_Insert_Click);
             // 
             // button_Close
             // 
