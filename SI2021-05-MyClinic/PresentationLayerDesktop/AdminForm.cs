@@ -28,6 +28,7 @@ namespace PresentationLayerDesktop
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            
             textBox_FirstName.Text = admin.FirstName;
             textBox_LastName.Text = admin.LastName;
             textBox_Email.Text = admin.Email;
@@ -47,8 +48,14 @@ namespace PresentationLayerDesktop
         {
             DoctorManagementForm doctorManagementForm = new DoctorManagementForm(adminBusiness);
             doctorManagementForm.RefAdminForm = this;
+            doctorManagementForm.FormClosed += new FormClosedEventHandler(FormClose);
             doctorManagementForm.Show();
             this.Hide(); 
+        }
+        private void FormClose(object sender, EventArgs e)
+        {
+            textBox_CurrentNumberDoctors.Text = adminBusiness.GetAllDoctors().Count().ToString();
+            this.Refresh();
         }
     }
 }

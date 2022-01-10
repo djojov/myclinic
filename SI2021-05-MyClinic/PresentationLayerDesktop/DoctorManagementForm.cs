@@ -31,6 +31,7 @@ namespace PresentationLayerDesktop
         {
             this.RefAdminForm.Show();
             this.Close();
+            RefAdminForm.Refresh();
         }
 
         private void dataGridView_DoctorList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -52,10 +53,6 @@ namespace PresentationLayerDesktop
                 textBox_Specialization.Text = row.Cells[7].Value.ToString();
                 textBox_Department.Text = row.Cells[8].Value.ToString();
                 textBox_Email.Text = row.Cells[9].Value.ToString();
-                /*if (comboBox_Status.SelectedItem.ToString() == "Active")
-                    status = true;
-                else
-                    status = false;*/
             }
         }
 
@@ -85,7 +82,14 @@ namespace PresentationLayerDesktop
         private void button_InsertNewDoctor_Click(object sender, EventArgs e)
         {
             InsertDoctorForm insertDoctorForm = new InsertDoctorForm(adminBusiness);
+            insertDoctorForm.RefDoctorManagementForm = this;
+            insertDoctorForm.FormClosed += new FormClosedEventHandler(FormClose);
             insertDoctorForm.Show();
+        }
+        private void FormClose(object sender, EventArgs e)
+        {
+            dataGridView_DoctorList.DataSource = adminBusiness.GetAllDoctors();
+            this.Refresh();
         }
     }
 }
