@@ -60,21 +60,27 @@ namespace PresentationLayerDesktop
                 if (comboBox_LoginAs.SelectedItem.ToString() == "Admin")
                 {
                     Admin admin = adminBusiness.GetAdmin(textBox_Email.Text, textBox_Password.Text);
-                    if (admin == null)
+                    if (admin.Id == 0 )
                     { 
                         MessageBox.Show("There is no admin with those e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        AdminForm adminForm = new AdminForm();
+                        AdminForm adminForm = new AdminForm(adminBusiness,doctorBusiness,admin);
+                        adminForm.RefLoginForm = this;
+                        //this.Visible = false;
                         this.Hide();
                         adminForm.Show();
+                        comboBox_LoginAs.SelectedIndex = -1;
+                        textBox_Email.Text = "";
+                        textBox_Password.Text = "";
+                        textBox_Email.Focus();
                     }
                 }
                 else if (comboBox_LoginAs.SelectedItem.ToString() == "Doctor")
                 {
                     Doctor doctor = doctorBusiness.GetDoctor(textBox_Email.Text, textBox_Password.Text);
-                    if (doctor == null)
+                    if (doctor.Id == 0)
                     {
                         MessageBox.Show("There is no doctor with those e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -88,7 +94,7 @@ namespace PresentationLayerDesktop
                 else if (comboBox_LoginAs.SelectedItem.ToString() == "Patient")
                 {
                     Patient patient = patientBusiness.GetPatient(textBox_Email.Text, textBox_Password.Text);
-                    if (patient == null)
+                    if (patient.Id == 0)
                     {
                         MessageBox.Show("There is no patient with those e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
