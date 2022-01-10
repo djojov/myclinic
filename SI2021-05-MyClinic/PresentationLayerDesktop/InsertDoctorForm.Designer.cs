@@ -212,6 +212,7 @@ namespace PresentationLayerDesktop
             this.button_Close.TabIndex = 20;
             this.button_Close.Text = "Close";
             this.button_Close.UseVisualStyleBackColor = true;
+            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
             // InsertDoctorForm
             // 

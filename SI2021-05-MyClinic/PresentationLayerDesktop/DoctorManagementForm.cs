@@ -84,7 +84,8 @@ namespace PresentationLayerDesktop
 
         private void button_InsertNewDoctor_Click(object sender, EventArgs e)
         {
-
+            InsertDoctorForm insertDoctorForm = new InsertDoctorForm(adminBusiness);
+            insertDoctorForm.Show();
         }
     }
 }
