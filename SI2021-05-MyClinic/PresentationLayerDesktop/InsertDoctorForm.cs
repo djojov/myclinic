@@ -49,6 +49,8 @@ namespace PresentationLayerDesktop
             else if (!Regex.Match(textBox_Password.Text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$").Success)
             {
                 MessageBox.Show("Password entered incorrectly!\nYour password has to contain at least 8 characters, one uppercase and one lowercase letter and one special character!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Password.Text = "";
+                textBox_PasswordCheck.Text = "";
                 textBox_Password.Focus();
                 return;
             }
@@ -86,6 +88,14 @@ namespace PresentationLayerDesktop
             {
                 MessageBox.Show("Department cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Department.Focus();
+                return;
+            }
+            else if(textBox_Password.Text != textBox_PasswordCheck.Text)
+            {
+                MessageBox.Show("Your confirmation password does not match your password!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Password.Text = "";
+                textBox_PasswordCheck.Text = "";
+                textBox_Password.Focus();
                 return;
             }
             else

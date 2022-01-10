@@ -49,6 +49,8 @@ namespace PresentationLayerDesktop
             this.dateTimePicker_DateEmployed = new System.Windows.Forms.DateTimePicker();
             this.button_Insert = new System.Windows.Forms.Button();
             this.button_Close = new System.Windows.Forms.Button();
+            this.label_PasswordCheck = new System.Windows.Forms.Label();
+            this.textBox_PasswordCheck = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_FirstName
@@ -185,6 +187,7 @@ namespace PresentationLayerDesktop
             // 
             this.textBox_Password.Location = new System.Drawing.Point(178, 239);
             this.textBox_Password.Name = "textBox_Password";
+            this.textBox_Password.PasswordChar = '*';
             this.textBox_Password.Size = new System.Drawing.Size(200, 22);
             this.textBox_Password.TabIndex = 17;
             // 
@@ -215,11 +218,30 @@ namespace PresentationLayerDesktop
             this.button_Close.UseVisualStyleBackColor = true;
             this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
+            // label_PasswordCheck
+            // 
+            this.label_PasswordCheck.AutoSize = true;
+            this.label_PasswordCheck.Location = new System.Drawing.Point(12, 271);
+            this.label_PasswordCheck.Name = "label_PasswordCheck";
+            this.label_PasswordCheck.Size = new System.Drawing.Size(124, 17);
+            this.label_PasswordCheck.TabIndex = 21;
+            this.label_PasswordCheck.Text = "Confirm password:";
+            // 
+            // textBox_PasswordCheck
+            // 
+            this.textBox_PasswordCheck.Location = new System.Drawing.Point(178, 266);
+            this.textBox_PasswordCheck.Name = "textBox_PasswordCheck";
+            this.textBox_PasswordCheck.PasswordChar = '*';
+            this.textBox_PasswordCheck.Size = new System.Drawing.Size(200, 22);
+            this.textBox_PasswordCheck.TabIndex = 22;
+            // 
             // InsertDoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 412);
+            this.Controls.Add(this.textBox_PasswordCheck);
+            this.Controls.Add(this.label_PasswordCheck);
             this.Controls.Add(this.button_Close);
             this.Controls.Add(this.button_Insert);
             this.Controls.Add(this.dateTimePicker_DateEmployed);
@@ -270,5 +292,7 @@ namespace PresentationLayerDesktop
         private System.Windows.Forms.DateTimePicker dateTimePicker_DateEmployed;
         private System.Windows.Forms.Button button_Insert;
         private System.Windows.Forms.Button button_Close;
+        private System.Windows.Forms.Label label_PasswordCheck;
+        private System.Windows.Forms.TextBox textBox_PasswordCheck;
     }
 }
