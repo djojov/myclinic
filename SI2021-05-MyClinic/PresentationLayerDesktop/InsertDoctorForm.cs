@@ -70,7 +70,7 @@ namespace PresentationLayerDesktop
                 textBox_PhoneNumber.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_PersonalNumber.Text, @"^(\d{9})?$").Success)
+            else if (!Regex.Match(textBox_PersonalNumber.Text, @"^(\d{13})?$").Success)
             {
                 MessageBox.Show("Personal number entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_PersonalNumber.Focus();
