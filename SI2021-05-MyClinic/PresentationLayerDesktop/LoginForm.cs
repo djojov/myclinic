@@ -62,7 +62,7 @@ namespace PresentationLayerDesktop
                     Admin admin = adminBusiness.GetAdmin(textBox_Email.Text, textBox_Password.Text);
                     if (admin.Id == 0 )
                     { 
-                        MessageBox.Show("There is no admin with those e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("There is no admin with that e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -81,7 +81,7 @@ namespace PresentationLayerDesktop
                     Doctor doctor = doctorBusiness.GetDoctor(textBox_Email.Text, textBox_Password.Text);
                     if (doctor.Id == 0)
                     {
-                        MessageBox.Show("There is no doctor with those e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("There is no doctor with that e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -95,7 +95,7 @@ namespace PresentationLayerDesktop
                     Patient patient = patientBusiness.GetPatient(textBox_Email.Text, textBox_Password.Text);
                     if (patient.Id == 0)
                     {
-                        MessageBox.Show("There is no patient with those e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("There is no patient with that e-mail and password", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
