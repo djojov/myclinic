@@ -26,6 +26,7 @@ namespace PresentationLayerDesktop
         {
 
         }
+        public DoctorManagementForm RefDoctorManagementForm { get; set; }
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -33,7 +34,6 @@ namespace PresentationLayerDesktop
 
         private void button_Insert_Click(object sender, EventArgs e)
         {
-            Doctor doctor = new Doctor();
             if (textBox_FirstName.Text == "" || textBox_LastName.Text == "" || textBox_PersonalNumber.Text == "" ||
                 textBox_PhoneNumber.Text == "" || textBox_Specialization.Text == "" || textBox_Department.Text == "" || 
                 textBox_Email.Text == "" || textBox_Password.Text == "")
@@ -70,9 +70,9 @@ namespace PresentationLayerDesktop
                 textBox_PhoneNumber.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_PersonalNumber.Text, @"^(\d{13})?$").Success)
+            else if (!Regex.Match(textBox_PersonalNumber.Text, @"^(\d{9})?$").Success)
             {
-                MessageBox.Show("Phone number entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Personal number entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_PersonalNumber.Focus();
                 return;
             }
@@ -88,6 +88,33 @@ namespace PresentationLayerDesktop
                 textBox_Department.Focus();
                 return;
             }
+            else
+            {
+                Doctor doctor = new Doctor();
+                doctor.FirstName = textBox_FirstName.Text;
+                doctor.LastName = textBox_LastName.Text;
+                doctor.PhoneNumber = textBox_PhoneNumber.Text;
+                doctor.PersonalNumber = textBox_PersonalNumber.Text;
+                doctor.DateEmployed = dateTimePicker_DateEmployed.Value;
+                doctor.Specialization = textBox_Specialization.Text;
+                doctor.Department = textBox_Department.Text;
+                doctor.Email = textBox_Email.Text;
+                doctor.Password = textBox_Password.Text;
+                string result = adminBusiness.InsertDoctor(doctor);
+                MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBox_FirstName.Text = "";
+                textBox_LastName.Text = "";
+                textBox_PhoneNumber.Text = "";
+                textBox_PersonalNumber.Text = "";
+                dateTimePicker_DateEmployed.Value = DateTime.Now;
+                textBox_Specialization.Text = "";
+                textBox_Department.Text = "";
+                textBox_Email.Text = "";
+                textBox_Password.Text = "";
+            }
         }
+
+       
     }
 }
