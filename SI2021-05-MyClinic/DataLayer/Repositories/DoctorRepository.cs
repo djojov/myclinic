@@ -97,7 +97,7 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM DOCTORS WHERE email=@email AND password=@password";
+                string query = "SELECT * FROM DOCTORS WHERE email=@email AND password=@password AND status=1";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@email", email);
                 command.Parameters.AddWithValue("@password", password);
