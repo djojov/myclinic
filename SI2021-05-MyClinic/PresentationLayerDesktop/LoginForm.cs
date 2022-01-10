@@ -68,7 +68,6 @@ namespace PresentationLayerDesktop
                     {
                         AdminForm adminForm = new AdminForm(adminBusiness,doctorBusiness,admin);
                         adminForm.RefLoginForm = this;
-                        //this.Visible = false;
                         this.Hide();
                         adminForm.Show();
                         comboBox_LoginAs.SelectedIndex = -1;
