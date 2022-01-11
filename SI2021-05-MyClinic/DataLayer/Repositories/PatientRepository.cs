@@ -26,7 +26,7 @@ namespace DataLayer.Repositories
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    string report = reader.GetString(0) + " " + reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3);
+                    string report = "Doctor: " +reader.GetString(0) + " " + reader.GetString(1) + " Date admitted: " + reader.GetDateTime(2) + " Diagnosis: " + reader.GetString(3);
                     ListOfDiagnosis.Add(report);
                 }
                 reader.Close();
