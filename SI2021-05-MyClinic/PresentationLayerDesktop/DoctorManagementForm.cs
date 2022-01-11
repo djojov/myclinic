@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -58,6 +59,54 @@ namespace PresentationLayerDesktop
 
         private void button_Update_Click(object sender, EventArgs e)
         {
+            if (textBox_FirstName.Text == "" || textBox_LastName.Text == "" || textBox_PersonalNumber.Text == "" ||
+                textBox_PhoneNumber.Text == "" || textBox_Specialization.Text == "" || textBox_Department.Text == "" ||
+                textBox_Email.Text == "")
+            {
+                MessageBox.Show("You have to fill out all of the fields", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!Regex.Match(textBox_Email.Text, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").Success)
+            {
+                MessageBox.Show("E-mail entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Email.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_FirstName.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            {
+                MessageBox.Show("First name cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_FirstName.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_LastName.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            {
+                MessageBox.Show("Last name cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_LastName.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_PhoneNumber.Text, @"^[0][6]\d{1}[1-9]\d{2,3}\d{3,4}$").Success)
+            {
+                MessageBox.Show("Phone number entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_PhoneNumber.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_PersonalNumber.Text, @"^(\d{13})?$").Success)
+            {
+                MessageBox.Show("Personal number entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_PersonalNumber.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_Specialization.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            {
+                MessageBox.Show("Specialization cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Specialization.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_Department.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            {
+                MessageBox.Show("Department cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Department.Focus();
+                return;
+            }
             Doctor doctor = new Doctor();
             doctor.Id = Convert.ToInt32(textBox_Id.Text);
             doctor.FirstName = textBox_FirstName.Text;
