@@ -16,13 +16,16 @@ namespace PresentationLayerDesktop
     {
         IPatientBusiness patientBusiness;
         Patient patient;
-        public ReportViewForm(IPatientBusiness _patientBusiness, Patient _patient)
+        Doctor doctor;
+        public ReportViewForm(IPatientBusiness _patientBusiness, Patient _patient, Doctor _doctor)
         {
             patientBusiness = _patientBusiness;
             patient = _patient;
+            doctor = _doctor;
             InitializeComponent();
         }
         public PatientManagementForm RefPatientManagementForm { get; set; }
+        public PatientForm RefPatientForm { get; set; }
         private void ReportViewForm_Load(object sender, EventArgs e)
         {
             textBox_PatientFullName.Text = patient.FirstName + " " + patient.LastName;
@@ -38,7 +41,14 @@ namespace PresentationLayerDesktop
         
         private void button_Close_Click(object sender, EventArgs e)
         {
-            this.RefPatientManagementForm.Show();
+            if (doctor == null)
+            {
+                this.RefPatientForm.Show();
+            }
+            else
+            {
+                this.RefPatientManagementForm.Show();
+            }
             this.Close();
         }
     }
