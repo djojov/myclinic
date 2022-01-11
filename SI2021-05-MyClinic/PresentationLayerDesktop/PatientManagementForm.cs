@@ -111,6 +111,18 @@ namespace PresentationLayerDesktop
                 dateTimePicker_DateOfBirth.Focus();
                 return;
             }
+            else if (!Regex.Match(textBox_Weight.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            {
+                MessageBox.Show("Weight cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Weight.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_Height.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            {
+                MessageBox.Show("Height cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Height.Focus();
+                return;
+            }
             Patient patient = new Patient();
             patient.FirstName = textBox_FirstName.Text;
             patient.LastName = textBox_LastName.Text;
@@ -159,6 +171,7 @@ namespace PresentationLayerDesktop
             patient.PhoneNumber = textBox_PhoneNumber.Text;
             patient.Weight = textBox_Weight.Text;
             patient.Height = textBox_Height.Text;
+
             if (textBox_FirstName.Text == "" || textBox_LastName.Text == "" || textBox_PersonalNumber.Text == "" ||
                 textBox_PhoneNumber.Text == "" || textBox_HealthInsuranceNumber.Text == "" || textBox_PlaceOfBirth.Text == ""
                 || textBox_Height.Text == "" || textBox_Height.Text == "")
@@ -166,10 +179,18 @@ namespace PresentationLayerDesktop
                 MessageBox.Show("You have to select a patient!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             List<Patient> temp = doctorBusiness.GetAllPatients().Where(person => person.PersonalNumber == textBox_PersonalNumber.Text).ToList();
             patient.Password = temp[0].Password;
             patient.Email = temp[0].Email;
             patient.Id = temp[0].Id;
+
+            if(patient == null)
+            {
+                MessageBox.Show("You have to select a patient!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             InsertReportForm insertReportForm = new InsertReportForm(doctorBusiness, doctor, patient);
             insertReportForm.RefPatientManagementForm = this;
             insertReportForm.Show();
@@ -187,6 +208,7 @@ namespace PresentationLayerDesktop
             patient.PhoneNumber = textBox_PhoneNumber.Text;
             patient.Weight = textBox_Weight.Text;
             patient.Height = textBox_Height.Text;
+
             if (textBox_FirstName.Text == "" || textBox_LastName.Text == "" || textBox_PersonalNumber.Text == "" ||
                 textBox_PhoneNumber.Text == "" || textBox_HealthInsuranceNumber.Text == "" || textBox_PlaceOfBirth.Text == ""
                 || textBox_Height.Text == "" || textBox_Height.Text == "")
@@ -194,13 +216,16 @@ namespace PresentationLayerDesktop
                 MessageBox.Show("You have to select a patient!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             List<Patient> temp = doctorBusiness.GetAllPatients().Where(person => person.PersonalNumber == textBox_PersonalNumber.Text).ToList();
             patient.Password = temp[0].Password;
             patient.Email = temp[0].Email;
             patient.Id = temp[0].Id;
+
             ReportViewForm viewReportForm = new ReportViewForm(patientBusiness, patient, doctor);
             viewReportForm.RefPatientManagementForm = this;
             viewReportForm.Show();
+
         }
     }
 }

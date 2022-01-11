@@ -84,6 +84,18 @@ namespace PresentationLayerDesktop
                 textBox_Email.Focus();
                 return;
             }
+            else if (!Regex.Match(textBox_Weight.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            {
+                MessageBox.Show("Weight cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Weight.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_Height.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            {
+                MessageBox.Show("Height cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Height.Focus();
+                return;
+            }
             Patient patient = new Patient();
             patient.FirstName = textBox_FirstName.Text;
             patient.LastName = textBox_LastName.Text;
