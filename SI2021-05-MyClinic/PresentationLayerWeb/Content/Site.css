@@ -1,1 +1,10 @@
-﻿
+﻿#login_Form {
+    width: 400px;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+th, td {
+    word-wrap: break-word;
+}
