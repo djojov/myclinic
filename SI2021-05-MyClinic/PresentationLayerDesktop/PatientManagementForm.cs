@@ -198,7 +198,7 @@ namespace PresentationLayerDesktop
             patient.Password = temp[0].Password;
             patient.Email = temp[0].Email;
             patient.Id = temp[0].Id;
-            ReportViewForm viewReportForm = new ReportViewForm(patientBusiness, patient);
+            ReportViewForm viewReportForm = new ReportViewForm(patientBusiness, patient, doctor);
             viewReportForm.RefPatientManagementForm = this;
             viewReportForm.Show();
         }
