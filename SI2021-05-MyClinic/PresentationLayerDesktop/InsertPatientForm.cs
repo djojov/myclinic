@@ -39,6 +39,8 @@ namespace PresentationLayerDesktop
                 || textBox_Height.Text == "" || textBox_Height.Text == "")
             {
                 MessageBox.Show("You have to fill out all of the fields", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_FirstName.Focus();
+                return;
             }
             else if (!Regex.Match(textBox_FirstName.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
             {

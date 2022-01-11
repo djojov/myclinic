@@ -64,6 +64,8 @@ namespace PresentationLayerDesktop
                 textBox_Email.Text == "")
             {
                 MessageBox.Show("You have to fill out all of the fields", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_FirstName.Focus();
+                return;
             }
             else if (!Regex.Match(textBox_Email.Text, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").Success)
             {
