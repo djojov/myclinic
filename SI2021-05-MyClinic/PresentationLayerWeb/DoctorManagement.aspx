@@ -79,7 +79,7 @@
         </div>
         <div class="row">
             <div class="col mt-3">
-                <asp:Button CssClass="btn btn-primary" OnClick="Button_UpdateDoctor_Click" ID="Button_UpdateDoctor" Text="Update doctor" runat="server" /> <span> or </span> <asp:Button CssClass="btn btn-primary" ID="Button_InsertDoctor" Text="Insert new doctor" runat="server" />
+                <asp:Button CssClass="btn btn-primary" OnClick="Button_UpdateDoctor_Click" ID="Button_UpdateDoctor" Text="Update doctor" runat="server" /> <span> or </span> <asp:Button CssClass="btn btn-primary" ID="Button_InsertDoctor" Text="Insert new doctor" OnClick="Button_InsertDoctor_Click" runat="server" />
             </div>
         </div>
     </div>

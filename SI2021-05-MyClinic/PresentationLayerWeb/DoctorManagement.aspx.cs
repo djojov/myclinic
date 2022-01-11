@@ -75,25 +75,33 @@ namespace PresentationLayerWeb
             {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You have to fill out all of the fields')", true);
             }
-            Doctor doctor = new Doctor();
-            doctor.Id = Convert.ToInt32(TextBox_Id.Text);
-            doctor.FirstName = TextBox_FirstName.Text;
-            doctor.LastName = TextBox_LastName.Text;
-            doctor.PersonalNumber = TextBox_PersonalNumber.Text;
-            doctor.PhoneNumber = TextBox_PhoneNumber.Text;
-            doctor.Specialization = TextBox_Specialization.Text;
-            doctor.Department = TextBox_Department.Text;
-            doctor.DateEmployed = DateTime.Parse(TextBox_DateEmployed.Text);
-            doctor.Email = TextBox_Email.Text;
-            if (DropDownList_Status.SelectedItem.ToString() == "Active")
-                doctor.Status = true;
             else
-                doctor.Status = false;
-            /*List<Doctor> temp = adminBusiness.GetAllDoctors().Where(doc => doc.Id == Convert.ToInt32(TextBox_Id.Text)).ToList();
-            doctor.Password = temp[0].Password;*/
-            doctor.Password = TextBox_Password.Text;
-            string result = adminBusiness.UpdateDoctor(doctor);
-            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('"+result+ "')", true);
+            {
+                Doctor doctor = new Doctor();
+                doctor.Id = Convert.ToInt32(TextBox_Id.Text);
+                doctor.FirstName = TextBox_FirstName.Text;
+                doctor.LastName = TextBox_LastName.Text;
+                doctor.PersonalNumber = TextBox_PersonalNumber.Text;
+                doctor.PhoneNumber = TextBox_PhoneNumber.Text;
+                doctor.Specialization = TextBox_Specialization.Text;
+                doctor.Department = TextBox_Department.Text;
+                doctor.DateEmployed = DateTime.Parse(TextBox_DateEmployed.Text);
+                doctor.Email = TextBox_Email.Text;
+                if (DropDownList_Status.SelectedItem.ToString() == "Active")
+                    doctor.Status = true;
+                else
+                    doctor.Status = false;
+                /*List<Doctor> temp = adminBusiness.GetAllDoctors().Where(doc => doc.Id == Convert.ToInt32(TextBox_Id.Text)).ToList();
+                doctor.Password = temp[0].Password;*/
+                doctor.Password = TextBox_Password.Text;
+                string result = adminBusiness.UpdateDoctor(doctor);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + result + "')", true);
+            }
+        }
+
+        protected void Button_InsertDoctor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/InsertDoctor.aspx");
         }
     }
 }
