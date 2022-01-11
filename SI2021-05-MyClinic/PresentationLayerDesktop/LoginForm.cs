@@ -104,9 +104,14 @@ namespace PresentationLayerDesktop
                     }
                     else
                     {
-                        PatientForm patientForm = new PatientForm();
+                        PatientForm patientForm = new PatientForm(patientBusiness, patient);
+                        patientForm.RefLoginForm = this;
                         this.Hide();
                         patientForm.Show();
+                        comboBox_LoginAs.SelectedIndex = -1;
+                        textBox_Email.Text = "";
+                        textBox_Password.Text = "";
+                        textBox_Email.Focus();
                     }
                 }
                 else
