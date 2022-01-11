@@ -85,9 +85,14 @@ namespace PresentationLayerDesktop
                     }
                     else
                     {
-                        DoctorForm doctorForm = new DoctorForm();
+                        DoctorForm doctorForm = new DoctorForm(doctorBusiness,patientBusiness, doctor);
+                        doctorForm.RefLoginForm = this;
                         this.Hide();
                         doctorForm.Show();
+                        comboBox_LoginAs.SelectedIndex = -1;
+                        textBox_Email.Text = "";
+                        textBox_Password.Text = "";
+                        textBox_Email.Focus();
                     }
                 }
                 else if (comboBox_LoginAs.SelectedItem.ToString() == "Patient")
