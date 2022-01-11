@@ -50,7 +50,11 @@ namespace PresentationLayerDesktop
             // label1
             // 
             this.label1.AutoSize = true;
+
             this.label1.Location = new System.Drawing.Point(21, 103);
+
+            this.label1.Location = new System.Drawing.Point(21, 53);
+
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 2;
@@ -58,7 +62,11 @@ namespace PresentationLayerDesktop
             // 
             // textBox_PatientFullName
             // 
+
             this.textBox_PatientFullName.Location = new System.Drawing.Point(124, 98);
+
+            this.textBox_PatientFullName.Location = new System.Drawing.Point(124, 48);
+
             this.textBox_PatientFullName.Name = "textBox_PatientFullName";
             this.textBox_PatientFullName.ReadOnly = true;
             this.textBox_PatientFullName.Size = new System.Drawing.Size(211, 22);
@@ -67,7 +75,11 @@ namespace PresentationLayerDesktop
             // label2
             // 
             this.label2.AutoSize = true;
+
             this.label2.Location = new System.Drawing.Point(21, 132);
+
+            this.label2.Location = new System.Drawing.Point(21, 89);
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 17);
             this.label2.TabIndex = 4;
@@ -75,7 +87,11 @@ namespace PresentationLayerDesktop
             // 
             // textBox_PatientPersonalNumber
             // 
+
             this.textBox_PatientPersonalNumber.Location = new System.Drawing.Point(197, 127);
+
+            this.textBox_PatientPersonalNumber.Location = new System.Drawing.Point(197, 86);
+
             this.textBox_PatientPersonalNumber.Name = "textBox_PatientPersonalNumber";
             this.textBox_PatientPersonalNumber.ReadOnly = true;
             this.textBox_PatientPersonalNumber.Size = new System.Drawing.Size(156, 22);

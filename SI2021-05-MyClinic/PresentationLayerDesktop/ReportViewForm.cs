@@ -26,19 +26,21 @@ namespace PresentationLayerDesktop
         }
         public PatientManagementForm RefPatientManagementForm { get; set; }
         public PatientForm RefPatientForm { get; set; }
+
         private void ReportViewForm_Load(object sender, EventArgs e)
         {
             textBox_PatientFullName.Text = patient.FirstName + " " + patient.LastName;
             textBox_PatientPersonalNumber.Text = patient.PersonalNumber;
             listBox_ReportList.HorizontalScrollbar = true;
             List<string> reportList = patientBusiness.GetReportData(patient.Id);
-            for (int i =0; i < reportList.Count(); i++) { 
+            for (int i = 0; i < reportList.Count(); i++)
+            {
                 listBox_ReportList.Items.Add(reportList[i]);
             }
-            
-            
+
+
         }
-        
+
         private void button_Close_Click(object sender, EventArgs e)
         {
             if (doctor == null)
