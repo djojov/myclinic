@@ -46,7 +46,10 @@ namespace PresentationLayerDesktop
 
         private void button_PatientManagement_Click(object sender, EventArgs e)
         {
-
+            PatientManagementForm patientManagementForm = new PatientManagementForm(doctorBusiness, patientBusiness);
+            patientManagementForm.RefDoctorForm = this;
+            patientManagementForm.Show();
+            this.Hide();
         }
     }
 }

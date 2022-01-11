@@ -209,7 +209,7 @@ namespace PresentationLayerDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 501);
+            this.ClientSize = new System.Drawing.Size(441, 483);
             this.Controls.Add(this.button_LogOut);
             this.Controls.Add(this.button_PatientManagement);
             this.Controls.Add(this.textBox_Email);
