@@ -68,11 +68,12 @@ namespace PresentationLayerWeb
                 Doctor doctor = doctorBusiness.GetDoctor(Convert.ToString(login_email.Value), Convert.ToString(login_password.Value));
                 if (doctor.Id == 0)
                 {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('There is no admin with that e-mail and password')", true);
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('There is no doctor with that e-mail and password')", true);
 
                 }
                 else
                 {
+                    Session["Doctor"] = doctor;
                     Response.Redirect("~/DoctorPanel.aspx");
                 }
 
@@ -82,11 +83,12 @@ namespace PresentationLayerWeb
                 Patient patient = patientBusiness.GetPatient(Convert.ToString(login_email.Value), Convert.ToString(login_password.Value));
                 if (patient.Id == 0)
                 {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('There is no admin with that e-mail and password')", true);
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('There is no patient with that e-mail and password')", true);
 
                 }
                 else
                 {
+                    Session["Patient"] = patient;
                     Response.Redirect("~/PatientPanel.aspx");
                 }
 
