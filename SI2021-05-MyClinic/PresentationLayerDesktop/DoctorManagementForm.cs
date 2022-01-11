@@ -97,7 +97,7 @@ namespace PresentationLayerDesktop
                 textBox_PersonalNumber.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Specialization.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            else if (!Regex.Match(textBox_Specialization.Text, @"^[a-zA-Z\s]*$").Success)
             {
                 MessageBox.Show("Specialization cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Specialization.Focus();
