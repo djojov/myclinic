@@ -53,6 +53,8 @@ namespace PresentationLayerDesktop
             this.button_InsertPatient = new System.Windows.Forms.Button();
             this.button_Close = new System.Windows.Forms.Button();
             this.dateTimePicker_DateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.button_InsertReport = new System.Windows.Forms.Button();
+            this.button_ViewReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PatientList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -224,7 +226,7 @@ namespace PresentationLayerDesktop
             // 
             // button_UpdatePatient
             // 
-            this.button_UpdatePatient.Location = new System.Drawing.Point(603, 555);
+            this.button_UpdatePatient.Location = new System.Drawing.Point(603, 494);
             this.button_UpdatePatient.Name = "button_UpdatePatient";
             this.button_UpdatePatient.Size = new System.Drawing.Size(130, 50);
             this.button_UpdatePatient.TabIndex = 23;
@@ -234,7 +236,7 @@ namespace PresentationLayerDesktop
             // 
             // button_InsertPatient
             // 
-            this.button_InsertPatient.Location = new System.Drawing.Point(603, 625);
+            this.button_InsertPatient.Location = new System.Drawing.Point(603, 550);
             this.button_InsertPatient.Name = "button_InsertPatient";
             this.button_InsertPatient.Size = new System.Drawing.Size(130, 47);
             this.button_InsertPatient.TabIndex = 24;
@@ -244,7 +246,7 @@ namespace PresentationLayerDesktop
             // 
             // button_Close
             // 
-            this.button_Close.Location = new System.Drawing.Point(603, 690);
+            this.button_Close.Location = new System.Drawing.Point(603, 706);
             this.button_Close.Name = "button_Close";
             this.button_Close.Size = new System.Drawing.Size(130, 36);
             this.button_Close.TabIndex = 25;
@@ -260,11 +262,33 @@ namespace PresentationLayerDesktop
             this.dateTimePicker_DateOfBirth.Size = new System.Drawing.Size(137, 22);
             this.dateTimePicker_DateOfBirth.TabIndex = 26;
             // 
+            // button_InsertReport
+            // 
+            this.button_InsertReport.Location = new System.Drawing.Point(603, 603);
+            this.button_InsertReport.Name = "button_InsertReport";
+            this.button_InsertReport.Size = new System.Drawing.Size(130, 46);
+            this.button_InsertReport.TabIndex = 27;
+            this.button_InsertReport.Text = "Insert Report";
+            this.button_InsertReport.UseVisualStyleBackColor = true;
+            this.button_InsertReport.Click += new System.EventHandler(this.button_InsertReport_Click);
+            // 
+            // button_ViewReport
+            // 
+            this.button_ViewReport.Location = new System.Drawing.Point(603, 654);
+            this.button_ViewReport.Name = "button_ViewReport";
+            this.button_ViewReport.Size = new System.Drawing.Size(130, 46);
+            this.button_ViewReport.TabIndex = 28;
+            this.button_ViewReport.Text = "View Reports";
+            this.button_ViewReport.UseVisualStyleBackColor = true;
+            this.button_ViewReport.Click += new System.EventHandler(this.button_ViewReport_Click);
+            // 
             // PatientManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1468, 751);
+            this.Controls.Add(this.button_ViewReport);
+            this.Controls.Add(this.button_InsertReport);
             this.Controls.Add(this.dateTimePicker_DateOfBirth);
             this.Controls.Add(this.button_Close);
             this.Controls.Add(this.button_InsertPatient);
@@ -324,5 +348,7 @@ namespace PresentationLayerDesktop
         private System.Windows.Forms.Button button_InsertPatient;
         private System.Windows.Forms.Button button_Close;
         private System.Windows.Forms.DateTimePicker dateTimePicker_DateOfBirth;
+        private System.Windows.Forms.Button button_InsertReport;
+        private System.Windows.Forms.Button button_ViewReport;
     }
 }

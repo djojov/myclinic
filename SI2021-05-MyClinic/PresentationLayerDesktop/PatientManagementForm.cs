@@ -17,10 +17,12 @@ namespace PresentationLayerDesktop
     {
         IDoctorBusiness doctorBusiness;
         IPatientBusiness patientBusiness;
-        public PatientManagementForm(IDoctorBusiness _doctorBusiness, IPatientBusiness _patientBusiness)
+        Doctor doctor;
+        public PatientManagementForm(IDoctorBusiness _doctorBusiness, IPatientBusiness _patientBusiness, Doctor _doctor)
         {
             doctorBusiness = _doctorBusiness;
             patientBusiness = _patientBusiness;
+            doctor = _doctor;
             InitializeComponent();
         }
         public DoctorForm RefDoctorForm { get; set; }
@@ -64,6 +66,8 @@ namespace PresentationLayerDesktop
                 || textBox_Height.Text == "" || textBox_Height.Text == "")
             {
                 MessageBox.Show("You have to fill out all of the fields", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_FirstName.Focus();
+                return;
             }
             else if (!Regex.Match(textBox_FirstName.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
             {
@@ -141,6 +145,62 @@ namespace PresentationLayerDesktop
             dataGridView_PatientList.Columns[7].Visible = false;
             dataGridView_PatientList.Columns[8].Visible = false;
             this.Refresh();
+        }
+
+        private void button_InsertReport_Click(object sender, EventArgs e)
+        {
+            Patient patient = new Patient();
+            patient.FirstName = textBox_FirstName.Text;
+            patient.LastName = textBox_LastName.Text;
+            patient.PersonalNumber = textBox_PersonalNumber.Text;
+            patient.HealthInsuranceNumber = textBox_HealthInsuranceNumber.Text;
+            patient.DateOfBirth = dateTimePicker_DateOfBirth.Value;
+            patient.PlaceOfBirth = textBox_PlaceOfBirth.Text;
+            patient.PhoneNumber = textBox_PhoneNumber.Text;
+            patient.Weight = textBox_Weight.Text;
+            patient.Height = textBox_Height.Text;
+            if (textBox_FirstName.Text == "" || textBox_LastName.Text == "" || textBox_PersonalNumber.Text == "" ||
+                textBox_PhoneNumber.Text == "" || textBox_HealthInsuranceNumber.Text == "" || textBox_PlaceOfBirth.Text == ""
+                || textBox_Height.Text == "" || textBox_Height.Text == "")
+            {
+                MessageBox.Show("You have to select a patient!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            List<Patient> temp = doctorBusiness.GetAllPatients().Where(person => person.PersonalNumber == textBox_PersonalNumber.Text).ToList();
+            patient.Password = temp[0].Password;
+            patient.Email = temp[0].Email;
+            patient.Id = temp[0].Id;
+            InsertReportForm insertReportForm = new InsertReportForm(doctorBusiness, doctor, patient);
+            insertReportForm.RefPatientManagementForm = this;
+            insertReportForm.Show();
+        }
+
+        private void button_ViewReport_Click(object sender, EventArgs e)
+        {
+            Patient patient = new Patient();
+            patient.FirstName = textBox_FirstName.Text;
+            patient.LastName = textBox_LastName.Text;
+            patient.PersonalNumber = textBox_PersonalNumber.Text;
+            patient.HealthInsuranceNumber = textBox_HealthInsuranceNumber.Text;
+            patient.DateOfBirth = dateTimePicker_DateOfBirth.Value;
+            patient.PlaceOfBirth = textBox_PlaceOfBirth.Text;
+            patient.PhoneNumber = textBox_PhoneNumber.Text;
+            patient.Weight = textBox_Weight.Text;
+            patient.Height = textBox_Height.Text;
+            if (textBox_FirstName.Text == "" || textBox_LastName.Text == "" || textBox_PersonalNumber.Text == "" ||
+                textBox_PhoneNumber.Text == "" || textBox_HealthInsuranceNumber.Text == "" || textBox_PlaceOfBirth.Text == ""
+                || textBox_Height.Text == "" || textBox_Height.Text == "")
+            {
+                MessageBox.Show("You have to select a patient!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            List<Patient> temp = doctorBusiness.GetAllPatients().Where(person => person.PersonalNumber == textBox_PersonalNumber.Text).ToList();
+            patient.Password = temp[0].Password;
+            patient.Email = temp[0].Email;
+            patient.Id = temp[0].Id;
+            ReportViewForm viewReportForm = new ReportViewForm(patientBusiness, patient);
+            viewReportForm.RefPatientManagementForm = this;
+            viewReportForm.Show();
         }
     }
 }
