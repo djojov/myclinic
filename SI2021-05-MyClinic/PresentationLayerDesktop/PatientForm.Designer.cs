@@ -57,8 +57,8 @@ namespace PresentationLayerDesktop
             this.label2 = new System.Windows.Forms.Label();
             this.button_UpdateData = new System.Windows.Forms.Button();
             this.button_ReportView = new System.Windows.Forms.Button();
-            this.button_Close = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_LogOut = new System.Windows.Forms.Button();
+            this.button_CalculateBMI = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_FirstName
@@ -299,32 +299,33 @@ namespace PresentationLayerDesktop
             this.button_ReportView.UseVisualStyleBackColor = true;
             this.button_ReportView.Click += new System.EventHandler(this.button_ReportView_Click);
             // 
-            // button_Close
+            // button_LogOut
             // 
-            this.button_Close.Location = new System.Drawing.Point(302, 431);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(107, 48);
-            this.button_Close.TabIndex = 28;
-            this.button_Close.Text = "Log out";
-            this.button_Close.UseVisualStyleBackColor = true;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
+            this.button_LogOut.Location = new System.Drawing.Point(302, 431);
+            this.button_LogOut.Name = "button_LogOut";
+            this.button_LogOut.Size = new System.Drawing.Size(107, 48);
+            this.button_LogOut.TabIndex = 28;
+            this.button_LogOut.Text = "Log out";
+            this.button_LogOut.UseVisualStyleBackColor = true;
+            this.button_LogOut.Click += new System.EventHandler(this.button_LogOut_Click);
             // 
-            // button2
+            // button_CalculateBMI
             // 
-            this.button2.Location = new System.Drawing.Point(296, 257);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 30);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Calculate BMI";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_CalculateBMI.Location = new System.Drawing.Point(296, 257);
+            this.button_CalculateBMI.Name = "button_CalculateBMI";
+            this.button_CalculateBMI.Size = new System.Drawing.Size(113, 30);
+            this.button_CalculateBMI.TabIndex = 29;
+            this.button_CalculateBMI.Text = "Calculate BMI";
+            this.button_CalculateBMI.UseVisualStyleBackColor = true;
+            this.button_CalculateBMI.Click += new System.EventHandler(this.button_CalculateBMI_Click);
             // 
             // PatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 491);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button_Close);
+            this.Controls.Add(this.button_CalculateBMI);
+            this.Controls.Add(this.button_LogOut);
             this.Controls.Add(this.button_ReportView);
             this.Controls.Add(this.button_UpdateData);
             this.Controls.Add(this.label2);
@@ -391,7 +392,7 @@ namespace PresentationLayerDesktop
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_UpdateData;
         private System.Windows.Forms.Button button_ReportView;
-        private System.Windows.Forms.Button button_Close;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_LogOut;
+        private System.Windows.Forms.Button button_CalculateBMI;
     }
 }

@@ -40,7 +40,7 @@ namespace PresentationLayerDesktop
             textBox_Email.Text = patient.Email;
         }
 
-        private void button_Close_Click(object sender, EventArgs e)
+        private void button_LogOut_Click(object sender, EventArgs e)
         {
             this.RefLoginForm.Show();
             this.Close();
@@ -105,6 +105,18 @@ namespace PresentationLayerDesktop
                 textBox_Password.Focus();
                 return;
             }
+            else if (!Regex.Match(textBox_Weight.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            {
+                MessageBox.Show("Weight cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Weight.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_Height.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            {
+                MessageBox.Show("Height cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Height.Focus();
+                return;
+            }
             patient.PhoneNumber = textBox_PhoneNumber.Text;
             patient.Weight = textBox_Weight.Text;
             patient.Height = textBox_Height.Text;
@@ -113,8 +125,47 @@ namespace PresentationLayerDesktop
             {
                 patient.Password = patient.Password;
             }
+            else
+            {
+                patient.Password = textBox_Password.Text;
+            }
             string result = patientBusiness.UpdateSelf(patient);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button_CalculateBMI_Click(object sender, EventArgs e)
+        {
+            if (textBox_Height.Text == "" || textBox_Weight.Text == "")
+            {
+                MessageBox.Show("You have to fill out both weight and height fields!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Weight.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_Weight.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            {
+                MessageBox.Show("Weight cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Weight.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBox_Height.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            {
+                MessageBox.Show("Height cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_Height.Focus();
+                return;
+            }
+            string result = patientBusiness.CalculateBMI(textBox_Weight.Text, textBox_Height.Text);
+            if(result == "Underweight!" || result == "Overweight!")
+            {
+                MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(result == "Healthy!")
+            {
+                MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
