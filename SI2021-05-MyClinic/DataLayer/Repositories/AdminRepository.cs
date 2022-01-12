@@ -120,13 +120,13 @@ namespace DataLayer
             }
         }
 
-        public int DeleteAdmin(Admin admin) 
+        public int DeleteAdmin(int id) 
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "DELETE FROM ADMINS WHERE id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@id", admin.Id);
+                command.Parameters.AddWithValue("@id", id);
 
                 connection.Open();
                 int rowsUpdated;
@@ -135,13 +135,13 @@ namespace DataLayer
                 return rowsUpdated;
             }
         }
-        public int DeleteDoctor(Doctor doctor)
+        public int DeleteDoctor(int id)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "DELETE FROM DOCTORS WHERE id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@id", doctor.Id);
+                command.Parameters.AddWithValue("@id", id);
 
                 connection.Open();
                 int rowsUpdated;

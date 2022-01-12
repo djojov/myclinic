@@ -47,9 +47,9 @@ namespace BusinessLayer
                 return "Failed to update doctor!";
             }
         }
-        public string DeleteDoctor(Doctor doctor)
+        public string DeleteDoctor(int id)
         {
-            int rowsAffected = this.adminRepository.DeleteDoctor(doctor.Id);
+            int rowsAffected = this.adminRepository.DeleteDoctor(id);
 
             if (rowsAffected > 0)
             {
@@ -60,9 +60,9 @@ namespace BusinessLayer
                 return "Failed to delete doctor!";
             }
         }
-        public string DeleteAdmin(Admin admin)
+        public string DeleteAdmin(int id)
         {
-            int rowsAffected = this.adminRepository.DeleteAdmin(admin.Id);
+            int rowsAffected = this.adminRepository.DeleteAdmin(id);
 
             if (rowsAffected > 0)
             {
