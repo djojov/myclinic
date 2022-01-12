@@ -124,6 +124,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="DoctorManagement.aspx" />
+    <Content Include="DoctorPanel.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="InsertDoctor.aspx" />
@@ -288,6 +289,13 @@
     </Compile>
     <Compile Include="DoctorManagement.aspx.designer.cs">
       <DependentUpon>DoctorManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorPanel.aspx.cs">
+      <DependentUpon>DoctorPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorPanel.aspx.designer.cs">
+      <DependentUpon>DoctorPanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
