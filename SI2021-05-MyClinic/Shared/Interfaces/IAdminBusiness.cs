@@ -13,5 +13,7 @@ namespace Shared.Interfaces
         string InsertDoctor(Doctor doc);
         string UpdateDoctor(Doctor doc);
         Admin GetAdmin(string email, string password);
+        string DeleteDoctor(Doctor doctor);
+        string DeleteAdmin(Admin admin);
     }
 }

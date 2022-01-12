@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{FA9DF184-B2FE-420A-895F-CBB06E2198AF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FFBADA02-AC0F-424B-B9F7-DE2720AA144E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminRepositoryTests", "AdminRepositoryTests\AdminRepositoryTests.csproj", "{80BE6523-B2B5-413E-8C27-4BFFE6254220}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{FA9DF184-B2FE-420A-895F-CBB06E2198AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9DF184-B2FE-420A-895F-CBB06E2198AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9DF184-B2FE-420A-895F-CBB06E2198AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80BE6523-B2B5-413E-8C27-4BFFE6254220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BE6523-B2B5-413E-8C27-4BFFE6254220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BE6523-B2B5-413E-8C27-4BFFE6254220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BE6523-B2B5-413E-8C27-4BFFE6254220}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{80BE6523-B2B5-413E-8C27-4BFFE6254220} = {FFBADA02-AC0F-424B-B9F7-DE2720AA144E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F80CDB4A-D7E8-45EA-8625-5EA22E374442}
