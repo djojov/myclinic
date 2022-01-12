@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FFBADA02
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminRepositoryTests", "AdminRepositoryTests\AdminRepositoryTests.csproj", "{80BE6523-B2B5-413E-8C27-4BFFE6254220}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminBusinessTests", "AdminBusinessTests\AdminBusinessTests.csproj", "{17E17301-67F7-473D-8E3D-425A8E53F8BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,12 +37,17 @@ Global
 		{80BE6523-B2B5-413E-8C27-4BFFE6254220}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80BE6523-B2B5-413E-8C27-4BFFE6254220}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80BE6523-B2B5-413E-8C27-4BFFE6254220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E17301-67F7-473D-8E3D-425A8E53F8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E17301-67F7-473D-8E3D-425A8E53F8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E17301-67F7-473D-8E3D-425A8E53F8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E17301-67F7-473D-8E3D-425A8E53F8BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{80BE6523-B2B5-413E-8C27-4BFFE6254220} = {FFBADA02-AC0F-424B-B9F7-DE2720AA144E}
+		{17E17301-67F7-473D-8E3D-425A8E53F8BF} = {FFBADA02-AC0F-424B-B9F7-DE2720AA144E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F80CDB4A-D7E8-45EA-8625-5EA22E374442}
