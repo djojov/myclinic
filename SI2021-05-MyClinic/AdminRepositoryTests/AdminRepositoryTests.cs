@@ -69,7 +69,18 @@ namespace AdminRepositoryTests
             Assert.IsTrue(result > 0);
 
         }
+        [TestMethod]
+        public void GetAdminTest()
+        {
+            adminRepository.InsertDoctor(doctor);
+            Admin newAdmin = adminRepository.GetAdmin("admin@myclinic.com", "Adminadmin123@");
+            Assert.AreEqual(newAdmin.Id, admin.Id);
+            Assert.AreEqual(newAdmin.FirstName, admin.FirstName);
+            Assert.AreEqual(newAdmin.LastName, admin.LastName);
+            Assert.AreEqual(newAdmin.Email, admin.Email);
+            Assert.AreEqual(newAdmin.Password, admin.Password);
 
+        }
 
         [TestCleanup]
         public void Clean()
