@@ -89,6 +89,24 @@ namespace AdminBusinessTests
             Assert.AreEqual(result, "Doctor successfully updated!");
         }
 
+        [TestMethod]
+        public void ifGottenAdmin()
+        {
+            mockAdminRepository.Setup(x => x.GetAdmin(admin.Email, admin.Password)).Returns(new Admin { 
+                Id = 1,
+                FirstName = "Marko",
+                LastName = "Markovic",
+                Email = "admin@myclinic.com",
+                Password = "Adminadmin123@"
+            }); 
+            this.adminBusiness = new AdminBusiness(mockAdminRepository.Object);
+
+            var result = adminBusiness.GetAdmin(admin.Email, admin.Password);
+
+            Assert.AreEqual(result.Id,1);
+        }
+
+
 
 
     }
