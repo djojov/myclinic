@@ -22,10 +22,11 @@ namespace AdminRepositoryTests
         {
             admin = new Admin
             {
-                Id = 2,
-                FirstName = "Boban",
-                LastName = "Bobanovic",
-                Email = "bbbb@myclinic.com"
+                Id = 1,
+                FirstName = "Marko",
+                LastName = "Markovic",
+                Email = "admin@myclinic.com",
+                Password= "Adminadmin123@"
             };
             doctor = new Doctor
             {
@@ -60,6 +61,16 @@ namespace AdminRepositoryTests
             Assert.IsTrue(result > 0);
 
         }
+        [TestMethod]
+
+        public void InsertDoctorTest()
+        { 
+            int result = adminRepository.InsertDoctor(doctor);
+            Assert.IsTrue(result > 0);
+
+        }
+
+
         [TestCleanup]
         public void Clean()
         {
