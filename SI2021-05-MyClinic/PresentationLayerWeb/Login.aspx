@@ -1,4 +1,22 @@
 ﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="PresentationLayerWeb.Login" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="Navigation" Runat="Server">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+             <div class="container">
+                <a class="navbar-brand" href="#">MyClinic</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container my-5 d-flex justify-content-center">

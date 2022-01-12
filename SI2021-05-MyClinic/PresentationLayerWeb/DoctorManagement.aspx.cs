@@ -101,7 +101,9 @@ namespace PresentationLayerWeb
 
         protected void Button_InsertDoctor_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/InsertDoctor.aspx");
+            string url = "InsertDoctor.aspx";
+            string s = "window.open('" + url + "', 'popup_window', 'width=1024,height=800,left=100,top=100,resizable=yes');";
+            ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
         }
     }
 }

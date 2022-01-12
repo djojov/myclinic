@@ -43,10 +43,7 @@ namespace PresentationLayerWeb
 
         protected void Button_DoctorManagement_Click(object sender, EventArgs e)
         {
-            string url = "DoctorManagement.aspx";
-            string s = "window.open('" + url + "', 'popup_window', 'width=1280,height=800,left=100,top=100,resizable=yes');";
-            ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
-
+            Response.Redirect("~/DoctorManagement.aspx");
         }
     }
 }

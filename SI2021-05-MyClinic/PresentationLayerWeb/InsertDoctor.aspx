@@ -1,4 +1,33 @@
 ﻿<%@ Page Title="Insert Doctor" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InsertDoctor.aspx.cs" Inherits="PresentationLayerWeb.InsertDoctor" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="Navigation" Runat="Server">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+             <div class="container">
+                <a class="navbar-brand" href="#">MyClinic</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                          <asp:HyperLink CssClass="nav-link" ID="HyperLink1" runat="server" NavigateUrl="~/AdminPanel.aspx">Admin panel</asp:HyperLink>
+                      </li>
+                      <li class="nav-item">
+                        <asp:HyperLink CssClass="nav-link" ID="HyperLink2" runat="server" NavigateUrl="~/DoctorManagement.aspx">Doctor management</asp:HyperLink>
+                      </li>
+                        <li class="nav-item active">
+                        <asp:HyperLink CssClass="nav-link" ID="HyperLink3" runat="server" NavigateUrl="~/InsertDoctor.aspx">Insert doctor<span class="sr-only">(current)</span></asp:HyperLink>
+                            <li class="nav-item">
+                        <asp:HyperLink CssClass="nav-link" ID="HyperLink4" runat="server" NavigateUrl="~/Login.aspx">Log out</asp:HyperLink>
+                      </li>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container my-5">
         <div class="row">
