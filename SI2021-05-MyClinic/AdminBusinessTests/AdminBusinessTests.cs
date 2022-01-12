@@ -58,6 +58,15 @@ namespace AdminBusinessTests
             listOfDoctors.Add(doctor2);
         }
 
-        
+        [TestMethod]
+        public void GetAllDoctorsTest()
+        {
+            mockAdminRepository.Setup(x => x.GetAllDoctors()).Returns(listOfDoctors);
+            this.adminBusiness = new AdminBusiness(mockAdminRepository.Object);
+
+            var result = adminBusiness.GetAllDoctors();
+
+            Assert.AreEqual(2, result.Count);
+        }
     }
 }
