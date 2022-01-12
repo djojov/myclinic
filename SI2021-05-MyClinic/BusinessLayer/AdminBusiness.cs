@@ -60,20 +60,7 @@ namespace BusinessLayer
                 return "Failed to delete doctor!";
             }
         }
-        public string DeleteAdmin(int id)
-        {
-            int rowsAffected = this.adminRepository.DeleteAdmin(id);
 
-            if (rowsAffected > 0)
-            {
-                return "Admin successfully deleted!";
-            }
-            else
-            {
-                return "Failed to delete admin!";
-            }
-
-        }
 
         public Admin GetAdmin(string email, string password)
         {

@@ -14,6 +14,5 @@ namespace Shared.Interfaces
         string UpdateDoctor(Doctor doc);
         Admin GetAdmin(string email, string password);
         string DeleteDoctor(int id);
-        string DeleteAdmin(int id);
     }
 }
