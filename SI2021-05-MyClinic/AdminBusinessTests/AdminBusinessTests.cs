@@ -78,6 +78,17 @@ namespace AdminBusinessTests
 
             Assert.AreEqual(result, "Doctor successfully added!");
         }
+        [TestMethod]
+        public void isDoctorUpdated()
+        {
+            mockAdminRepository.Setup(x => x.UpdateDoctor(doctor)).Returns(1);
+            this.adminBusiness = new AdminBusiness(mockAdminRepository.Object);
+
+            var result = adminBusiness.UpdateDoctor(doctor);
+
+            Assert.AreEqual(result, "Doctor successfully updated!");
+        }
+
 
 
     }
