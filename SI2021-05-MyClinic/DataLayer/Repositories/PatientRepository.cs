@@ -26,7 +26,7 @@ namespace DataLayer.Repositories
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    string report = reader.GetString(0) + " " + reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3);
+                    string report = "Doctor: " +reader.GetString(0) + " " + reader.GetString(1) + " Date admitted: " + reader.GetDateTime(2).ToString() + " Diagnosis: " + reader.GetString(3);
                     ListOfDiagnosis.Add(report);
                 }
                 reader.Close();
@@ -44,6 +44,8 @@ namespace DataLayer.Repositories
                 command.Parameters.AddWithValue("@phoneNumber", patient.PhoneNumber);
                 command.Parameters.AddWithValue("@weight", patient.Weight);
                 command.Parameters.AddWithValue("@height", patient.Height);
+                command.Parameters.AddWithValue("@email", patient.Email);
+                command.Parameters.AddWithValue("@password", patient.Password);
                 command.Parameters.AddWithValue("@id", patient.Id);
 
                 connection.Open();
@@ -92,6 +94,22 @@ namespace DataLayer.Repositories
 
             float bmi = (float)w / h / h * 10000;
             return bmi;
+        }
+        public int DeletePatient(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM PATIENTS WHERE id=@id";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@id",id);
+
+                connection.Open();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
+            }
         }
     }
 }
