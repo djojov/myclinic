@@ -67,6 +67,9 @@ namespace PresentationLayerWeb
             
             TextBox_PFirstName.Text = gvr.Cells[2].Text;
             TextBox_PLastName.Text = gvr.Cells[3].Text;
+
+            TextBox_ViewReports.Text = "";
+            TextBox_ViewReports.Visible = false;
         }
 
         protected void Button_UpdatePatient_Click(object sender, EventArgs e)
@@ -128,6 +131,29 @@ namespace PresentationLayerWeb
         {
             Session.Abandon();
             Response.Redirect("~/Login.aspx");
+        }
+
+        protected void Button_ViewReports_Click(object sender, EventArgs e)
+        {
+            if (TextBox_Id.Text == "" || TextBox_FirstName.Text == "" || TextBox_LastName.Text == "" || TextBox_PersonalNumber.Text == "" ||
+                TextBox_PhoneNumber.Text == "" || TextBox_HealthInsuranceNumber.Text == "" || TextBox_PlaceOfBirth.Text == "" ||
+                TextBox_DateOfBirth.Text == "" || TextBox_Weight.Text == "" || TextBox_Height.Text == "")
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You have to select a patient!')", true);
+            }
+            else
+            {
+                Patient patient = new Patient();
+                patient.Id = Convert.ToInt32(TextBox_Id.Text);
+
+                TextBox_ViewReports.Visible = true;
+                List<string> reportList = patientBusiness.GetReportData(patient.Id);
+                
+                foreach(String s in reportList)
+                {
+                    TextBox_ViewReports.Text = String.Join(Environment.NewLine, reportList);
+                }
+            }
         }
     }
 }

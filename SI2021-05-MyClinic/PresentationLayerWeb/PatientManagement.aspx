@@ -112,8 +112,13 @@
                     <asp:Label ID="Label_PDiagnosis" runat="server" Text="Diagnosis:"></asp:Label>
                      <textarea id="TextArea_PDiagnosis" class="form-control" rows="3" runat="server"></textarea>
                 </div>
+                <div class="row">
+                    <div class="col my-3">
+                    <asp:Button CssClass="btn btn-primary" OnClick="Button_InsertPatientReport_Click" ID="Button_InsertPatientReport" Text="Insert report" runat="server" /> <span> or </span> <asp:Button CssClass="btn btn-primary" ID="Button_ViewReports" Text="View patient reports" OnClick="Button_ViewReports_Click" runat="server" />
+                    </div>
+                </div>
                 <div class="form-group row">
-                    <asp:Button CssClass="btn btn-primary" OnClick="Button_InsertPatientReport_Click" ID="Button_InsertPatientReport" Text="Insert report" runat="server" />
+                    <asp:TextBox runat="server" CssClass="form-control" Rows="8" ID="TextBox_ViewReports" ReadOnly="True" TextMode="MultiLine" Visible="false" />
                 </div>
             </div>
         </div>
