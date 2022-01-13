@@ -85,5 +85,39 @@ namespace DoctorBusinessTests
 
             Assert.AreEqual(result, "Patient successfully added!");
         }
+
+        [TestMethod]
+        public void isDoctorUpdatedTest()
+        {
+            mockDoctorRepository.Setup(x => x.UpdatePatient(patient1)).Returns(1);
+            this.doctorBusiness = new DoctorBusiness(mockDoctorRepository.Object);
+
+            var result = doctorBusiness.UpdatePatient(patient1);
+
+            Assert.AreEqual(result, "Patient successfully updated!");
+        }
+        [TestMethod]
+        public void ifGottenDoctorTest()
+        {
+            mockDoctorRepository.Setup(x => x.GetDoctor(doctor.Email, doctor.Password)).Returns(new Doctor
+            {
+                Id = 99999,
+                Status = true,
+                FirstName = "Goran",
+                LastName = "Goranovic",
+                PersonalNumber = "0000000000000",
+                PhoneNumber = "0600000000",
+                DateEmployed = Convert.ToDateTime("1975-01-01"),
+                Specialization = "psychology",
+                Department = "psychiatry",
+                Email = "xxxxxx@gmail.com",
+                Password = "Password123@"
+            });
+            this.doctorBusiness = new DoctorBusiness(mockDoctorRepository.Object);
+
+            var result = doctorBusiness.GetDoctor(doctor.Email, doctor.Password);
+
+            Assert.AreEqual(result.Id, 99999);
+        }
     }
 }
