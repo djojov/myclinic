@@ -41,12 +41,12 @@ namespace PresentationLayerWeb
                 Response.Redirect("~/Login.aspx");
             }
             var patient = (Patient)Session["Patient"];
+            TextBox_Id.Text = patient.Id.ToString();
             TextBox_FirstName.Text = patient.FirstName;
             TextBox_LastName.Text = patient.LastName;
             TextBox_PersonalNumber.Text = patient.PersonalNumber;
             TextBox_HealthInsuranceNumber.Text = patient.HealthInsuranceNumber;
             TextBox_PhoneNumber.Text = patient.PhoneNumber;
-            TextBox_Password.Text = patient.Password;
             TextBox_DateOfBirth.Text = patient.DateOfBirth.ToString();
             TextBox_PlaceOfBirth.Text = patient.PlaceOfBirth;
             TextBox_Email.Text = patient.Email;
@@ -74,7 +74,30 @@ namespace PresentationLayerWeb
         }
         protected void Button_UpdateSelf_Click(object sender, EventArgs e)
         {
+            Response.Redirect("~/Management.aspx");
+        }
 
+        protected void Button_ShowReports_Click(object sender, EventArgs e)
+        {
+            if (TextBox_Id.Text == "" || TextBox_FirstName.Text == "" || TextBox_LastName.Text == "" || TextBox_PersonalNumber.Text == "" ||
+                TextBox_PhoneNumber.Text == "" || TextBox_HealthInsuranceNumber.Text == "" || TextBox_PlaceOfBirth.Text == "" ||
+                TextBox_DateOfBirth.Text == "" || TextBox_Weight.Text == "" || TextBox_Height.Text == "")
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You have to select a patient!')", true);
+            }
+            else
+            {
+                var patient  = (Patient)Session["Patient"];
+                patient.Id = Convert.ToInt32(TextBox_Id.Text);
+
+                TextBox_ViewReports.Visible = true;
+                List<string> reportList = patientBusiness.GetReportData(patient.Id);
+
+                foreach (String s in reportList)
+                {
+                    TextBox_ViewReports.Text = String.Join(Environment.NewLine, reportList);
+                }
+            }
         }
     }
 }

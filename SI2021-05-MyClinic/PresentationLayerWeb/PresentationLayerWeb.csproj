@@ -131,6 +131,7 @@
     <Content Include="InsertDoctor.aspx" />
     <Content Include="InsertPatient.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Management.aspx" />
     <Content Include="PatientManagement.aspx" />
     <Content Include="PatientPanel.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -324,6 +325,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
     <Compile Include="PatientManagement.aspx.cs">
       <DependentUpon>PatientManagement.aspx</DependentUpon>
