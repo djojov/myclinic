@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shared.Interfaces;
 using Shared.Models;
 using System;
+using System.Linq;
 
 namespace PatientRepositoryTests
 {
@@ -11,10 +12,11 @@ namespace PatientRepositoryTests
     {
         public Doctor doctor;
         public IDoctorRepository doctorRepository;
+
         public Patient patient;
         public IPatientRepository patientRepository;
         [TestInitialize]
-        public void init() 
+        public void Init()
         {
             patient = new Patient
             {
@@ -31,12 +33,28 @@ namespace PatientRepositoryTests
                 Weight = "100",
                 Height = "190"
             };
-            patientRepository = new PatientRepository();
             doctorRepository = new DoctorRepository();
+            patientRepository = new PatientRepository();
         }
         [TestMethod]
         public void GetPatientTest()
         {
+            Patient patient1 = new Patient
+            {
+                Id = 999999,
+                FirstName = "Boban",
+                LastName = "Bobanovic",
+                PersonalNumber = "2222222222222",
+                HealthInsuranceNumber = "22222222222",
+                DateOfBirth = Convert.ToDateTime("1975-01-01"),
+                PlaceOfBirth = "Boljevac",
+                Email = "somemail@gmail.com",
+                Password = "Password123@",
+                PhoneNumber = "0699999999",
+                Weight = "100",
+                Height = "190"
+            };
+            doctorRepository.InsertPatient(patient1);
             Patient patient = patientRepository.GetPatient("urosmilosevic@myclinic.com", "Password123@");
             Assert.AreEqual(patient.Id, patient.Id);
             Assert.AreEqual(patient.FirstName, patient.FirstName);
@@ -50,6 +68,12 @@ namespace PatientRepositoryTests
             Assert.AreEqual(patient.PhoneNumber, patient.PhoneNumber);
             Assert.AreEqual(patient.Weight, patient.Weight);
             Assert.AreEqual(patient.Height, patient.Height);
+        }
+        [TestCleanup]
+        public void Clean()
+        {
+            Patient newPatient = doctorRepository.GetAllPatients().Where(x => x.PersonalNumber == patient.PersonalNumber).OrderByDescending(x => x.Id).First();
+            doctorRepository.DeletePatient(newPatient.Id);
         }
     }
 }
