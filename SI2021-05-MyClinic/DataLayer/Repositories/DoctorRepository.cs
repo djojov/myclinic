@@ -143,6 +143,21 @@ namespace DataLayer.Repositories
                 return rowsUpdated;
             }
         }
+        public int DeletePatient(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM PATIENTS WHERE id=@id";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                connection.Open();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
+            }
+        }
         public int DeleteReport(int doctor_id, int patient_id, string diagnosis)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -160,6 +175,5 @@ namespace DataLayer.Repositories
                 return rowsUpdated;
             }
         }
-
     }
 }
