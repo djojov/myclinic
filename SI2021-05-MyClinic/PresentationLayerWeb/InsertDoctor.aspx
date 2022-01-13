@@ -38,12 +38,12 @@
                 <div class="form-group row">
                     <asp:Label ID="Label_FirstName" runat="server" Text="Fist name:"></asp:Label>
                     <asp:TextBox CssClass="form-control" ID="TextBox_FirstName" runat="server"></asp:TextBox>
-                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_FirstName" runat="server" ErrorMessage="First name entered incorrectly!" Text="First name entered incorrectly!" ControlToValidate="TextBox_FirstName" ValidationExpression="^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$"></asp:RegularExpressionValidator></small>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_FirstName" runat="server" ErrorMessage="First name entered incorrectly!" Text="First name entered incorrectly!" ControlToValidate="TextBox_FirstName" ValidationExpression="^[A-Z]+[A-Za-z\s]{1,15}([A-Z]?)+([A-Za-z\s]?)$"></asp:RegularExpressionValidator></small>
                 </div>
                 <div class="form-group row">
                     <asp:Label ID="Label_LastName" runat="server" Text="Last name:"></asp:Label>
                     <asp:TextBox CssClass="form-control" ID="TextBox_LastName" runat="server"></asp:TextBox>
-                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_LastName" runat="server" ErrorMessage="Last name entered incorrectly!" Text="Last name entered incorrectly!" ControlToValidate="TextBox_LastName" ValidationExpression="^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$"></asp:RegularExpressionValidator></small>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_LastName" runat="server" ErrorMessage="Last name entered incorrectly!" Text="Last name entered incorrectly!" ControlToValidate="TextBox_LastName" ValidationExpression="^[A-Z]+[A-Za-z\s-]{1,30}([A-Z]?)+([A-Za-z\s]?)$"></asp:RegularExpressionValidator></small>
                 </div>
                 <div class="form-group row">
                     <asp:Label ID="Label_PersonalNumber" runat="server" Text="Personal number:"></asp:Label>
@@ -53,7 +53,7 @@
                 <div class="form-group row">
                     <asp:Label ID="Label_PhoneNumber" runat="server" Text="Phone number:"></asp:Label>
                     <asp:TextBox CssClass="form-control" ID="TextBox_PhoneNumber" runat="server"></asp:TextBox>
-                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_PhoneNumber" runat="server" ErrorMessage="Phone number entered incorrectly!" Text="Phone number entered incorrectly!" ControlToValidate="TextBox_PhoneNumber" ValidationExpression="^[0][6]\d{1}[1-9]\d{2,3}\d{3,4}$"></asp:RegularExpressionValidator></small>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_PhoneNumber" runat="server" ErrorMessage="Phone number entered incorrectly!" Text="Phone number entered incorrectly!" ControlToValidate="TextBox_PhoneNumber" ValidationExpression="^[0][6]\d{7,8}$"></asp:RegularExpressionValidator></small>
                 </div>
             </div>
             <div class="col-1"></div>
@@ -65,12 +65,12 @@
                 <div class="form-group row">
                     <asp:Label ID="Label_Specialization" runat="server" Text="Specialization:"></asp:Label>
                     <asp:TextBox CssClass="form-control" ID="TextBox_Specialization" runat="server"></asp:TextBox>
-                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Specialization" runat="server" ErrorMessage="Specialization entered incorrectly!" Text="Specialization entered incorrectly!" ControlToValidate="TextBox_Specialization" ValidationExpression="^([a-zA-Z]+\s)*[a-zA-Z]+$"></asp:RegularExpressionValidator></small>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Specialization" runat="server" ErrorMessage="Specialization entered incorrectly!" Text="Specialization entered incorrectly!" ControlToValidate="TextBox_Specialization" ValidationExpression="^[a-zA-Z\s]{1,30}$"></asp:RegularExpressionValidator></small>
                 </div>
                 <div class="form-group row">
                     <asp:Label ID="Label_Department" runat="server" Text="Department:"></asp:Label>
                     <asp:TextBox CssClass="form-control" ID="TextBox_Department" runat="server"></asp:TextBox>
-                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Department" runat="server" ErrorMessage="Department entered incorrectly!" Text="Department entered incorrectly!" ControlToValidate="TextBox_Department" ValidationExpression="^([a-zA-Z]+\s)*[a-zA-Z]+$"></asp:RegularExpressionValidator></small>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Department" runat="server" ErrorMessage="Department entered incorrectly!" Text="Department entered incorrectly!" ControlToValidate="TextBox_Department" ValidationExpression="^[a-zA-Z\s]{1,20}$"></asp:RegularExpressionValidator></small>
                 </div>
                 <div class="form-group row">
                     <asp:Label ID="Label_Email" runat="server" Text="E-mail:"></asp:Label>

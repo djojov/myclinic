@@ -95,8 +95,6 @@ namespace PresentationLayerWeb
                     doctor.Status = true;
                 else
                     doctor.Status = false;
-                /*List<Doctor> temp = adminBusiness.GetAllDoctors().Where(doc => doc.Id == Convert.ToInt32(TextBox_Id.Text)).ToList();
-                doctor.Password = temp[0].Password;*/
                 doctor.Password = TextBox_Password.Text;
                 string result = adminBusiness.UpdateDoctor(doctor);
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + result + "')", true);

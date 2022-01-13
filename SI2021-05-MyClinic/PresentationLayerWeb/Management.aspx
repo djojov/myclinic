@@ -37,12 +37,12 @@
                 <div class="form-group row">
                     <asp:Label ID="Label_Weight" runat="server" Text="Weight:"></asp:Label>
                     <asp:TextBox CssClass="form-control" ID="TextBox_Weight" runat="server"></asp:TextBox>
-                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Weight" runat="server" ErrorMessage="Weight entered incorrectly!" Text="Weight entered incorrectly!" ControlToValidate="TextBox_Weight" ValidationExpression="^[0-9]*[1-9][0-9]*$"></asp:RegularExpressionValidator></small>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Weight" runat="server" ErrorMessage="Weight entered incorrectly!" Text="Weight entered incorrectly!" ControlToValidate="TextBox_Weight" ValidationExpression="^[1-9]{0,1}[0-9]{1,2}$"></asp:RegularExpressionValidator></small>
                 </div>
                 <div class="form-group row">
                     <asp:Label ID="Label_Height" runat="server" Text="Height:"></asp:Label>
                     <asp:TextBox CssClass="form-control" ID="TextBox_Height" runat="server"></asp:TextBox>
-                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Height" runat="server" ErrorMessage="Height entered incorrectly!" Text="Height entered incorrectly!" ControlToValidate="TextBox_Height" ValidationExpression="^[0-9]*[1-9][0-9]*$"></asp:RegularExpressionValidator></small>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Height" runat="server" ErrorMessage="Height entered incorrectly!" Text="Height entered incorrectly!" ControlToValidate="TextBox_Height" ValidationExpression="^[1-9]{0,1}[0-9]{1,2}$"></asp:RegularExpressionValidator></small>
                 </div>
             </div>
             <div class="col-1"></div>
@@ -55,7 +55,7 @@
                 <div class="form-group row">
                     <asp:Label ID="Label_PhoneNumber" runat="server" Text="Phone number:"></asp:Label>
                     <asp:TextBox CssClass="form-control" ID="TextBox_PhoneNumber" runat="server"></asp:TextBox>
-                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_PhoneNumber" runat="server" ErrorMessage="Phone number entered incorrectly!" Text="Phone number entered incorrectly!" ControlToValidate="TextBox_PhoneNumber" ValidationExpression="^[0][6]\d{1}[1-9]\d{2,3}\d{3,4}$"></asp:RegularExpressionValidator></small>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_PhoneNumber" runat="server" ErrorMessage="Phone number entered incorrectly!" Text="Phone number entered incorrectly!" ControlToValidate="TextBox_PhoneNumber" ValidationExpression="^[0][6]\d{7,8}$"></asp:RegularExpressionValidator></small>
                 </div>
                 <div class="form-group row">
                     <asp:Label ID="Label_Password" runat="server" Text="Password:"></asp:Label>
