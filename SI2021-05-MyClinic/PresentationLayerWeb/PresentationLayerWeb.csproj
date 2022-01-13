@@ -128,6 +128,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="InsertDoctor.aspx" />
+    <Content Include="InsertPatient.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="PatientManagement.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -307,6 +308,13 @@
     </Compile>
     <Compile Include="InsertDoctor.aspx.designer.cs">
       <DependentUpon>InsertDoctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertPatient.aspx.cs">
+      <DependentUpon>InsertPatient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertPatient.aspx.designer.cs">
+      <DependentUpon>InsertPatient.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

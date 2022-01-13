@@ -46,7 +46,7 @@ namespace PresentationLayerWeb
         {
             if (TextBox_FirstName.Text == "" || TextBox_LastName.Text == "" || TextBox_PersonalNumber.Text == "" ||
                 TextBox_PhoneNumber.Text == "" || TextBox_Specialization.Text == "" || TextBox_Department.Text == "" ||
-                TextBox_Email.Text == "" || TextBox_Password.Text == "")
+                TextBox_Email.Text == "" || TextBox_Password.Text == "" || Input_DatePicker.Value == "")
             {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You have to fill out all of the fields')", true);
             }
@@ -71,7 +71,7 @@ namespace PresentationLayerWeb
                 TextBox_PhoneNumber.Text = "";
                 TextBox_Specialization.Text = "";
                 TextBox_Department.Text = "";
-                Input_DatePicker.Value = Convert.ToString(DateTime.Now);
+                Input_DatePicker.Value = "";
                 TextBox_Email.Text = "";
                 TextBox_Password.Text = "";
             }
