@@ -29,6 +29,7 @@ namespace PresentationLayerDesktop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorManagementForm));
             this.dataGridView_DoctorList = new System.Windows.Forms.DataGridView();
             this.label_Id = new System.Windows.Forms.Label();
             this.label_Status = new System.Windows.Forms.Label();
@@ -73,90 +74,100 @@ namespace PresentationLayerDesktop
             // label_Id
             // 
             this.label_Id.AutoSize = true;
+            this.label_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Id.Location = new System.Drawing.Point(28, 495);
             this.label_Id.Name = "label_Id";
-            this.label_Id.Size = new System.Drawing.Size(23, 17);
+            this.label_Id.Size = new System.Drawing.Size(23, 18);
             this.label_Id.TabIndex = 1;
             this.label_Id.Text = "Id:";
             // 
             // label_Status
             // 
             this.label_Status.AutoSize = true;
+            this.label_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Status.Location = new System.Drawing.Point(28, 526);
             this.label_Status.Name = "label_Status";
-            this.label_Status.Size = new System.Drawing.Size(52, 17);
+            this.label_Status.Size = new System.Drawing.Size(54, 18);
             this.label_Status.TabIndex = 2;
             this.label_Status.Text = "Status:";
             // 
             // label_FirstName
             // 
             this.label_FirstName.AutoSize = true;
+            this.label_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_FirstName.Location = new System.Drawing.Point(28, 557);
             this.label_FirstName.Name = "label_FirstName";
-            this.label_FirstName.Size = new System.Drawing.Size(80, 17);
+            this.label_FirstName.Size = new System.Drawing.Size(85, 18);
             this.label_FirstName.TabIndex = 3;
             this.label_FirstName.Text = "First Name:";
             // 
             // label_LastName
             // 
             this.label_LastName.AutoSize = true;
+            this.label_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_LastName.Location = new System.Drawing.Point(28, 589);
             this.label_LastName.Name = "label_LastName";
-            this.label_LastName.Size = new System.Drawing.Size(80, 17);
+            this.label_LastName.Size = new System.Drawing.Size(84, 18);
             this.label_LastName.TabIndex = 4;
             this.label_LastName.Text = "Last Name:";
             // 
             // label_PersonalNumber
             // 
             this.label_PersonalNumber.AutoSize = true;
+            this.label_PersonalNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PersonalNumber.Location = new System.Drawing.Point(28, 616);
             this.label_PersonalNumber.Name = "label_PersonalNumber";
-            this.label_PersonalNumber.Size = new System.Drawing.Size(122, 17);
+            this.label_PersonalNumber.Size = new System.Drawing.Size(128, 18);
             this.label_PersonalNumber.TabIndex = 5;
             this.label_PersonalNumber.Text = "Personal Number:";
             // 
             // label_PhoneNumber
             // 
             this.label_PhoneNumber.AutoSize = true;
+            this.label_PhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PhoneNumber.Location = new System.Drawing.Point(28, 648);
             this.label_PhoneNumber.Name = "label_PhoneNumber";
-            this.label_PhoneNumber.Size = new System.Drawing.Size(107, 17);
+            this.label_PhoneNumber.Size = new System.Drawing.Size(112, 18);
             this.label_PhoneNumber.TabIndex = 6;
             this.label_PhoneNumber.Text = "Phone Number:";
             // 
             // label_DateEmployed
             // 
             this.label_DateEmployed.AutoSize = true;
+            this.label_DateEmployed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_DateEmployed.Location = new System.Drawing.Point(28, 677);
             this.label_DateEmployed.Name = "label_DateEmployed";
-            this.label_DateEmployed.Size = new System.Drawing.Size(108, 17);
+            this.label_DateEmployed.Size = new System.Drawing.Size(113, 18);
             this.label_DateEmployed.TabIndex = 7;
             this.label_DateEmployed.Text = "Date Employed:";
             // 
             // label_Specialization
             // 
             this.label_Specialization.AutoSize = true;
+            this.label_Specialization.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Specialization.Location = new System.Drawing.Point(28, 709);
             this.label_Specialization.Name = "label_Specialization";
-            this.label_Specialization.Size = new System.Drawing.Size(99, 17);
+            this.label_Specialization.Size = new System.Drawing.Size(103, 18);
             this.label_Specialization.TabIndex = 8;
             this.label_Specialization.Text = "Specialization:";
             // 
             // label_Department
             // 
             this.label_Department.AutoSize = true;
+            this.label_Department.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Department.Location = new System.Drawing.Point(28, 741);
             this.label_Department.Name = "label_Department";
-            this.label_Department.Size = new System.Drawing.Size(86, 17);
+            this.label_Department.Size = new System.Drawing.Size(89, 18);
             this.label_Department.TabIndex = 9;
             this.label_Department.Text = "Department:";
             // 
             // label_Email
             // 
             this.label_Email.AutoSize = true;
-            this.label_Email.Location = new System.Drawing.Point(28, 775);
+            this.label_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Email.Location = new System.Drawing.Point(28, 774);
             this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(51, 17);
+            this.label_Email.Size = new System.Drawing.Size(54, 18);
             this.label_Email.TabIndex = 10;
             this.label_Email.Text = "E-mail:";
             // 
@@ -239,32 +250,41 @@ namespace PresentationLayerDesktop
             // 
             // button_Update
             // 
+            this.button_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Update.ForeColor = System.Drawing.Color.White;
             this.button_Update.Location = new System.Drawing.Point(547, 546);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(120, 35);
             this.button_Update.TabIndex = 22;
             this.button_Update.Text = "Update";
-            this.button_Update.UseVisualStyleBackColor = true;
+            this.button_Update.UseVisualStyleBackColor = false;
             this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
             // 
             // button_InsertNewDoctor
             // 
-            this.button_InsertNewDoctor.Location = new System.Drawing.Point(547, 600);
+            this.button_InsertNewDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button_InsertNewDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_InsertNewDoctor.ForeColor = System.Drawing.Color.White;
+            this.button_InsertNewDoctor.Location = new System.Drawing.Point(533, 598);
             this.button_InsertNewDoctor.Name = "button_InsertNewDoctor";
-            this.button_InsertNewDoctor.Size = new System.Drawing.Size(149, 33);
+            this.button_InsertNewDoctor.Size = new System.Drawing.Size(153, 54);
             this.button_InsertNewDoctor.TabIndex = 23;
             this.button_InsertNewDoctor.Text = "Insert New Doctor";
-            this.button_InsertNewDoctor.UseVisualStyleBackColor = true;
+            this.button_InsertNewDoctor.UseVisualStyleBackColor = false;
             this.button_InsertNewDoctor.Click += new System.EventHandler(this.button_InsertNewDoctor_Click);
             // 
             // button_Close
             // 
-            this.button_Close.Location = new System.Drawing.Point(547, 660);
+            this.button_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Close.ForeColor = System.Drawing.Color.White;
+            this.button_Close.Location = new System.Drawing.Point(564, 677);
             this.button_Close.Name = "button_Close";
             this.button_Close.Size = new System.Drawing.Size(90, 34);
             this.button_Close.TabIndex = 24;
             this.button_Close.Text = "Close";
-            this.button_Close.UseVisualStyleBackColor = true;
+            this.button_Close.UseVisualStyleBackColor = false;
             this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
             // DoctorManagementForm
@@ -296,7 +316,9 @@ namespace PresentationLayerDesktop
             this.Controls.Add(this.label_Status);
             this.Controls.Add(this.label_Id);
             this.Controls.Add(this.dataGridView_DoctorList);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DoctorManagementForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doctor Management";
             this.Load += new System.EventHandler(this.DoctorManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DoctorList)).EndInit();

@@ -57,5 +57,7 @@ namespace PresentationLayerDesktop
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             richTextBox_Diagnosis.Text = "";
         }
+
+       
     }
 }
