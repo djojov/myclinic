@@ -25,10 +25,19 @@ namespace PatientBusinessTests
             Email = "somemail22@gmail.com",
             Password = "Password124@",
             PhoneNumber = "0699999992",
-            Weight = "100",
+            Weight = "40",
             Height = "190"
         };
         private PatientBusiness patientBusiness;
+        [TestMethod]
+        public void CalculateBMITest()
+        {
+            mockPatientRepository.Setup(x => x.CalculateBMI(patient.Weight, patient.Height)).Returns(1);
+            this.patientBusiness = new PatientBusiness(mockPatientRepository.Object);
 
+            var result = patientBusiness.CalculateBMI(patient.Weight, patient.Height);
+
+            Assert.AreEqual("Underweight!", result);
+        }
     }
 }
