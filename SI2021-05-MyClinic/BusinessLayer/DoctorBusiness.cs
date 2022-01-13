@@ -60,6 +60,19 @@ namespace BusinessLayer
                 return "Failed to add report!";
             }
         }
+        public string DeletePatient(int id)
+        {
+            int rowsAffected = this.doctorRepository.DeletePatient(id);
+
+            if (rowsAffected > 0)
+            {
+                return "Patient successfully deleted!";
+            }
+            else
+            {
+                return "Failed to delete patient!";
+            }
+        }
         public Doctor GetDoctor(string email, string password)
         {
             return this.doctorRepository.GetDoctor(email, password);
