@@ -72,7 +72,7 @@ namespace AdminRepositoryTests
         public void GetAdminTest()
         {
             adminRepository.InsertDoctor(doctor);
-            Admin newAdmin = adminRepository.GetAdmin("admin@myclinic.com", "Adminadmin123@");
+            Admin newAdmin = adminRepository.GetAdmin(admin.Email, admin.Password);
             Assert.AreEqual(newAdmin.Id, admin.Id);
             Assert.AreEqual(newAdmin.FirstName, admin.FirstName);
             Assert.AreEqual(newAdmin.LastName, admin.LastName);

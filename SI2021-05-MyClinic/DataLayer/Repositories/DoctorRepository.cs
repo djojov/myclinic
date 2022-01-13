@@ -158,22 +158,5 @@ namespace DataLayer.Repositories
                 return rowsUpdated;
             }
         }
-        public int DeleteReport(int doctor_id, int patient_id, string diagnosis)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "DELETE FROM REPORTS WHERE doctor_id=@doc_id AND patient_id=@patient_id and diagnosis=@diagnosis";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@doc_id", doctor_id);
-                command.Parameters.AddWithValue("@patient_id", patient_id);
-                command.Parameters.AddWithValue("@diagnosis", diagnosis);
-
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
-            }
-        }
     }
 }
