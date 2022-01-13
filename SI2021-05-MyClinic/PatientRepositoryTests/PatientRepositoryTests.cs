@@ -77,6 +77,14 @@ namespace PatientRepositoryTests
             List<string> result = patientRepository.GetReportData(3);
             Assert.IsNotNull(result[0]);
         }
+        [TestMethod]
+        public void CalculateBMITest()
+        {
+            doctorRepository.InsertPatient(patient);
+            float result=patientRepository.CalculateBMI(patient.Weight,patient.Height);
+            Assert.AreEqual(Math.Round(result,1),27.7);
+        }
+
         [TestCleanup]
         public void Clean()
         {
