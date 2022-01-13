@@ -13,5 +13,6 @@ namespace Shared.Interfaces
         int UpdateSelf(Patient patient);
         Patient GetPatient(string email, string password);
         float CalculateBMI(string weight, string height);
+        public int DeletePatient(int id);
     }
 }

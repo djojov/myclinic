@@ -95,5 +95,21 @@ namespace DataLayer.Repositories
             float bmi = (float)w / h / h * 10000;
             return bmi;
         }
+        public int DeletePatient(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM PATIENTS WHERE id=@id";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@id",id);
+
+                connection.Open();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
+            }
+        }
     }
 }
