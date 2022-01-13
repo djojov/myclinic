@@ -90,7 +90,7 @@ namespace AdminBusinessTests
         }
 
         [TestMethod]
-        public void IfGottenAdmin()
+        public void IfGotAdmin()
         {
             mockAdminRepository.Setup(x => x.GetAdmin(admin.Email, admin.Password)).Returns(new Admin { 
                 Id = 1,

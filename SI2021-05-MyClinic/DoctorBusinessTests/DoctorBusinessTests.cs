@@ -97,7 +97,7 @@ namespace DoctorBusinessTests
             Assert.AreEqual(result, "Patient successfully updated!");
         }
         [TestMethod]
-        public void IfGottenDoctorTest()
+        public void IfGotDoctorTest()
         {
             mockDoctorRepository.Setup(x => x.GetDoctor(doctor.Email, doctor.Password)).Returns(new Doctor
             {
