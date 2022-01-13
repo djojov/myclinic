@@ -78,5 +78,11 @@ namespace PresentationLayerWeb
                 TextBox_Height.Text = "";
             }
         }
+
+        protected void Button_Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
+        }
     }
 }

@@ -19,7 +19,7 @@
                         <li class="nav-item active">
                         <asp:HyperLink CssClass="nav-link" ID="HyperLink3" runat="server" NavigateUrl="~/InsertDoctor.aspx">Insert doctor<span class="sr-only">(current)</span></asp:HyperLink>
                             <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" ID="HyperLink4" runat="server" NavigateUrl="~/Login.aspx">Log out</asp:HyperLink>
+                        <asp:Button CssClass="nav-link" ID="Button_Logout" runat="server" Text="Log out" OnClick="Button_Logout_Click"></asp:Button>
                       </li>
                       </li>
                     </ul>

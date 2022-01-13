@@ -55,5 +55,11 @@ namespace PresentationLayerWeb
         {
             Response.Redirect("~/PatientManagement.aspx");
         }
+
+        protected void Button_Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
+        }
     }
 }

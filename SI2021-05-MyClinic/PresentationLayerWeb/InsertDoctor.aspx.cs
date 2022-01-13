@@ -76,5 +76,11 @@ namespace PresentationLayerWeb
                 TextBox_Password.Text = "";
             }
         }
+
+        protected void Button_Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
+        }
     }
 }
