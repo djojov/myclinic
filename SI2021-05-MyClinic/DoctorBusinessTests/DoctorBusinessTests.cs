@@ -64,5 +64,26 @@ namespace DoctorBusinessTests
             listOfPatients.Add(patient1);
             listOfPatients.Add(patient2);
         }
+
+        [TestMethod]
+        public void GetAllPatientsTest()
+        {
+            mockDoctorRepository.Setup(x => x.GetAllPatients()).Returns(listOfPatients);
+            this.doctorBusiness = new DoctorBusiness(mockDoctorRepository.Object);
+
+            var result = doctorBusiness.GetAllPatients();
+
+            Assert.AreEqual(2, result.Count);
+        }
+        [TestMethod]
+        public void isPatientInserted()
+        {
+            mockDoctorRepository.Setup(x => x.InsertPatient(patient1)).Returns(1);
+            this.doctorBusiness = new DoctorBusiness(mockDoctorRepository.Object);
+
+            var result = doctorBusiness.InsertPatient(patient1);
+
+            Assert.AreEqual(result, "Patient successfully added!");
+        }
     }
 }
