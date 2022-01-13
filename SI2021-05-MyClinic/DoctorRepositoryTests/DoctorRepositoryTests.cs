@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shared.Interfaces;
 using Shared.Models;
 using System;
+using System.Linq;
 
 namespace DoctorRepositoryTests
 {
@@ -33,10 +34,10 @@ namespace DoctorRepositoryTests
             };
             patient = new Patient
             {
-                Id = 99999999,
+                Id = 999999,
                 FirstName = "Boban",
                 LastName = "Bobanovic",
-                PersonalNumber = "1111111111111",
+                PersonalNumber = "2222222222222",
                 HealthInsuranceNumber = "22222222222",
                 DateOfBirth = Convert.ToDateTime("1975-01-01"),
                 PlaceOfBirth = "Boljevac",
@@ -52,7 +53,23 @@ namespace DoctorRepositoryTests
         [TestMethod]
         public void GetAllPatientsTest() 
         {
+            doctorRepository.InsertPatient(patient);
             Assert.IsNotNull(doctorRepository.GetAllPatients());
+        }
+        [TestMethod]
+        public void UpdatePatientTest()
+        {
+            doctorRepository.InsertPatient(patient);
+            Patient newPatient = doctorRepository.GetAllPatients().Where(x => x.PersonalNumber == patient.PersonalNumber).ToList()[0];
+            int result = doctorRepository.UpdatePatient(newPatient);
+            Assert.IsTrue(result > 0);
+        }
+
+        [TestCleanup]
+        public void Clean()
+        {
+            Patient newPatient = doctorRepository.GetAllPatients().Where(x => x.PersonalNumber == patient.PersonalNumber).OrderByDescending(x => x.Id).First();
+            doctorRepository.DeletePatient(newPatient.Id);
         }
     }
 }

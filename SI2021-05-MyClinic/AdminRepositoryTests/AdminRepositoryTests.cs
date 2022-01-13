@@ -62,7 +62,6 @@ namespace AdminRepositoryTests
 
         }
         [TestMethod]
-
         public void InsertDoctorTest()
         { 
             int result = adminRepository.InsertDoctor(doctor);
