@@ -39,5 +39,30 @@ namespace PatientBusinessTests
 
             Assert.AreEqual("Underweight!", result);
         }
+        [TestMethod]
+        public void IfGotPatientTest()
+        {
+            mockPatientRepository.Setup(x => x.GetPatient(patient.Email, patient.Password)).Returns(new Patient
+            {
+                Id = 1000000,
+                FirstName = "Goran",
+                LastName = "Goranovic",
+                PersonalNumber = "2222222222233",
+                HealthInsuranceNumber = "22222222233",
+                DateOfBirth = Convert.ToDateTime("1975-01-01"),
+                PlaceOfBirth = "Boljevac",
+                Email = "somemail22@gmail.com",
+                Password = "Password124@",
+                PhoneNumber = "0699999992",
+                Weight = "40",
+                Height = "190"
+            });
+            this.patientBusiness = new PatientBusiness(mockPatientRepository.Object);
+
+            var result = patientBusiness.GetPatient(patient.Email, patient.Password);
+
+            Assert.AreEqual(result.Id, 1000000);
+        }
+        
     }
 }
