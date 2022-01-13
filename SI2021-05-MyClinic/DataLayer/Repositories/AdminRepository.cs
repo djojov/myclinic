@@ -119,5 +119,22 @@ namespace DataLayer
                 return admin;
             }
         }
+
+        public int DeleteDoctor(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM DOCTORS WHERE id=@id";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                connection.Open();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
+            }
+        }
+
     }
 }

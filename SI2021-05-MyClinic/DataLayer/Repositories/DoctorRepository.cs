@@ -73,7 +73,7 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO PATIENTS (first_name,last_name,personal_number,health_insurance_number,date_of_birth,place_of_birth,email,password,phone_number,weight,height) VALUES(@firstName,@lastName,@personalNumber,@HINumber,@dob,@pob,@email,'mypass123',@phoneNumber,@weight,@height)";
+                string query = "INSERT INTO PATIENTS (first_name,last_name,personal_number,health_insurance_number,date_of_birth,place_of_birth,email,password,phone_number,weight,height) VALUES(@firstName,@lastName,@personalNumber,@HINumber,@dob,@pob,@email,'Mypass123@',@phoneNumber,@weight,@height)";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@firstName", patient.FirstName);
                 command.Parameters.AddWithValue("@lastName", patient.LastName);
@@ -97,7 +97,7 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM DOCTORS WHERE email=@email AND password=@password";
+                string query = "SELECT * FROM DOCTORS WHERE email=@email AND password=@password AND status=1";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@email", email);
                 command.Parameters.AddWithValue("@password", password);
@@ -135,6 +135,21 @@ namespace DataLayer.Repositories
                 command.Parameters.AddWithValue("@doc_id", doctor_id);
                 command.Parameters.AddWithValue("@patient_id", patient_id);
                 command.Parameters.AddWithValue("@diagnosis", diagnosis);
+
+                connection.Open();
+                int rowsUpdated;
+                rowsUpdated = command.ExecuteNonQuery();
+                connection.Close();
+                return rowsUpdated;
+            }
+        }
+        public int DeletePatient(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM PATIENTS WHERE id=@id";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
 
                 connection.Open();
                 int rowsUpdated;
