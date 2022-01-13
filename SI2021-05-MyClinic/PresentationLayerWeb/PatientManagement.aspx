@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PatientManagement.aspx.cs" Inherits="PresentationLayerWeb.PatientManagement" %>
+﻿<%@ Page Title="Patient management" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PatientManagement.aspx.cs" Inherits="PresentationLayerWeb.PatientManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Navigation" runat="server">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
              <div class="container">
@@ -30,5 +30,76 @@
         </nav>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col">
+                <asp:GridView ID="GridView_PatientList" CssClass="table table-sm table-bordered text-center" Font-Size="12px" runat="server">
+                    <HeaderStyle CssClass="bg-primary text-white"/>
+                    <Columns>
+                        <asp:TemplateField headertext="Edit patient">
+                            <ItemTemplate>
+                                <asp:Button ID="Button_SelectPatient" CssClass="btn btn-primary" text="Select" runat="server" OnClick="Button_SelectPatient_Click" CommandName="SelectPatient"/>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <div class="form-group row">
+                    <asp:Label ID="Label_Id" runat="server" Text="Id:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_Id" runat="server" ReadOnly="True"></asp:TextBox>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_FirstName" runat="server" Text="Fist name:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_FirstName" runat="server"></asp:TextBox>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_FirstName" runat="server" ErrorMessage="First name entered incorrectly!" Text="First name entered incorrectly!" ControlToValidate="TextBox_FirstName" ValidationExpression="^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$"></asp:RegularExpressionValidator></small>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_LastName" runat="server" Text="Last name:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_LastName" runat="server"></asp:TextBox>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_LastName" runat="server" ErrorMessage="Last name entered incorrectly!" Text="Last name entered incorrectly!" ControlToValidate="TextBox_LastName" ValidationExpression="^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$"></asp:RegularExpressionValidator></small>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_PersonalNumber" runat="server" Text="Personal number:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_PersonalNumber" runat="server" ReadOnly="True"></asp:TextBox>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_HealthInsuranceNumber" runat="server" Text="Health Insurance number:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_HealthInsuranceNumber" runat="server" ReadOnly="True"></asp:TextBox>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_DateOfbirth" runat="server" Text="Date of birth:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_DateOfBirth" runat="server" ReadOnly="True"></asp:TextBox>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_PlaceOfBirth" runat="server" Text="Place of birth:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_PlaceOfBirth" runat="server" ReadOnly="true"></asp:TextBox>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_PhoneNumber" runat="server" Text="Phone number:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_PhoneNumber" runat="server"></asp:TextBox>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_PhoneNumber" runat="server" ErrorMessage="Phone number entered incorrectly!" Text="Phone number entered incorrectly!" ControlToValidate="TextBox_PhoneNumber" ValidationExpression="^[0][6]\d{1}[1-9]\d{2,3}\d{3,4}$"></asp:RegularExpressionValidator></small>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_Weight" runat="server" Text="Weight:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_Weight" runat="server"></asp:TextBox>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Weight" runat="server" ErrorMessage="Weight entered incorrectly!" Text="Weight entered incorrectly!" ControlToValidate="TextBox_Weight" ValidationExpression="^[0-9]*[1-9][0-9]*$"></asp:RegularExpressionValidator></small>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_Height" runat="server" Text="Height:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_Height" runat="server"></asp:TextBox>
+                    <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Height" runat="server" ErrorMessage="Height entered incorrectly!" Text="Height entered incorrectly!" ControlToValidate="TextBox_Height" ValidationExpression="^[0-9]*[1-9][0-9]*$"></asp:RegularExpressionValidator></small>
+                </div>
+                <div class="form-group row">
+                    <asp:Button CssClass="btn btn-primary" OnClick="Button_UpdatePatient_Click" ID="Button_UpdatePatient" Text="Update patient" runat="server" />
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-6">
 
+            </div>
+        </div>
+    </div>
 </asp:Content>

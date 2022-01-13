@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DoctorPanel.aspx.cs" Inherits="PresentationLayerWeb.DoctorPanel" %>
+﻿<%@ Page Title="Doctor panel" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DoctorPanel.aspx.cs" Inherits="PresentationLayerWeb.DoctorPanel" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Navigation" runat="server">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
              <div class="container">

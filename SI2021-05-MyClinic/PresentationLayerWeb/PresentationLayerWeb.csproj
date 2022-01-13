@@ -129,6 +129,7 @@
     <Content Include="Global.asax" />
     <Content Include="InsertDoctor.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="PatientManagement.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -313,6 +314,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement.aspx.cs">
+      <DependentUpon>PatientManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientManagement.aspx.designer.cs">
+      <DependentUpon>PatientManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
