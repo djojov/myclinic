@@ -48,7 +48,7 @@ namespace PresentationLayerDesktop
                 textBox_FirstName.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_LastName.Text, @"^[A-Z]+[A-Za-z\s]{1,30}([A-Z]?)+([A-Za-z\s]?)$").Success)
+            else if (!Regex.Match(textBox_LastName.Text, @"^[A-Z]+[A-Za-z\s-]{1,30}([A-Z]?)+([A-Za-z\s]?)$").Success)
             {
                 MessageBox.Show("Last name cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_LastName.Focus();
