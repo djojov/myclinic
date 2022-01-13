@@ -49,6 +49,11 @@ namespace DoctorRepositoryTests
             doctorRepository = new DoctorRepository();
             patientRepository = new PatientRepository();
         }
+        [TestMethod]
+        public void GetAllPatientsTest() 
+        {
+            Assert.IsNotNull(doctorRepository.GetAllPatients());
+        }
     }
 }
 
