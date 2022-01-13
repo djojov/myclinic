@@ -63,6 +63,15 @@ namespace PatientBusinessTests
 
             Assert.AreEqual(result.Id, 1000000);
         }
-        
+        [TestMethod]
+        public void DidSelfUpdateTest()
+        {
+            mockPatientRepository.Setup(x => x.UpdateSelf(patient)).Returns(1);
+            this.patientBusiness = new PatientBusiness(mockPatientRepository.Object);
+
+            var result = patientBusiness.UpdateSelf(patient);
+
+            Assert.AreEqual(result, "Successfully updated!");
+        }
     }
 }
