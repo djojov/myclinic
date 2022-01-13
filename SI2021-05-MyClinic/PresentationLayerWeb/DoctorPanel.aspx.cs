@@ -49,7 +49,7 @@ namespace PresentationLayerWeb
 
         protected void Button_PatientManagement_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/PatientManagement.aspx");
         }
     }
 }
