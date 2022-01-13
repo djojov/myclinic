@@ -60,11 +60,57 @@ namespace PresentationLayerWeb
             TextBox_PhoneNumber.Text = gvr.Cells[10].Text;
             TextBox_Weight.Text = gvr.Cells[11].Text;
             TextBox_Height.Text = gvr.Cells[12].Text;
+            
+            TextBox_PFirstName.Text = gvr.Cells[2].Text;
+            TextBox_PLastName.Text = gvr.Cells[3].Text;
         }
 
         protected void Button_UpdatePatient_Click(object sender, EventArgs e)
         {
+            if (TextBox_Id.Text == "" || TextBox_FirstName.Text == "" || TextBox_LastName.Text == "" || TextBox_PersonalNumber.Text == "" ||
+                TextBox_PhoneNumber.Text == "" || TextBox_HealthInsuranceNumber.Text == "" || TextBox_PlaceOfBirth.Text == "" ||
+                TextBox_DateOfBirth.Text == "" || TextBox_Weight.Text == "" || TextBox_Height.Text == "")
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You have to fill out all of the fields')", true);
+            }
+            else
+            {
+                Patient patient = new Patient();
+                patient.Id = Convert.ToInt32(TextBox_Id.Text);
+                patient.FirstName = TextBox_FirstName.Text;
+                patient.LastName = TextBox_LastName.Text;
+                patient.PersonalNumber = TextBox_PersonalNumber.Text;
+                patient.PhoneNumber = TextBox_PhoneNumber.Text;
+                patient.HealthInsuranceNumber = TextBox_HealthInsuranceNumber.Text;
+                patient.PlaceOfBirth = TextBox_PlaceOfBirth.Text;
+                patient.DateOfBirth = DateTime.Parse(TextBox_DateOfBirth.Text);
+                patient.Weight = TextBox_Weight.Text;
+                patient.Height = TextBox_Height.Text;
+                string result = doctorBusiness.UpdatePatient(patient);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + result + "')", true);
+            }
+        }
 
+        protected void Button_InsertPatientReport_Click(object sender, EventArgs e)
+        {
+            if (TextBox_Id.Text == "" || TextBox_FirstName.Text == "" || TextBox_LastName.Text == "" || TextBox_PersonalNumber.Text == "" ||
+                TextBox_PhoneNumber.Text == "" || TextBox_HealthInsuranceNumber.Text == "" || TextBox_PlaceOfBirth.Text == "" ||
+                TextBox_DateOfBirth.Text == "" || TextBox_Weight.Text == "" || TextBox_Height.Text == "")
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You have to select a patient!')", true);
+            }
+            else
+            {
+                Patient patient = new Patient();
+                patient.Id = Convert.ToInt32(TextBox_Id.Text);
+
+                var doctor = (Doctor)Session["Doctor"];
+                Session["doctorId"] = doctor.Id;
+                string diagnosis = Convert.ToString(TextArea_PDiagnosis.Value);
+                string result = doctorBusiness.InsertReport(Convert.ToInt32(Session["doctorId"]), patient.Id, diagnosis);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + result + "')", true);
+                TextArea_PDiagnosis.Value = "";
+            }
         }
     }
 }

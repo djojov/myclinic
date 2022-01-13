@@ -98,7 +98,21 @@
             </div>
             <div class="col-1"></div>
             <div class="col-6">
-
+                <div class="form-group row">
+                    <asp:Label ID="Label_PFirstName" runat="server" Text="Fist name:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_PFirstName" runat="server" ReadOnly="true"></asp:TextBox>
+                </div>
+                <div class="form-group row">
+                    <asp:Label ID="Label_PLastName" runat="server" Text="Last name:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox_PLastName" runat="server" ReadOnly="true"></asp:TextBox>
+                </div>
+                 <div class="form-group row">
+                    <asp:Label ID="Label_PDiagnosis" runat="server" Text="Diagnosis:"></asp:Label>
+                     <textarea id="TextArea_PDiagnosis" class="form-control" rows="3" runat="server"></textarea>
+                </div>
+                <div class="form-group row">
+                    <asp:Button CssClass="btn btn-primary" OnClick="Button_InsertPatientReport_Click" ID="Button_InsertPatientReport" Text="Insert report" runat="server" />
+                </div>
             </div>
         </div>
     </div>
