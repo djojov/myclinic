@@ -105,7 +105,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_LastName.AutoSize = true;
             this.label_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_LastName.Location = new System.Drawing.Point(28, 589);
+            this.label_LastName.Location = new System.Drawing.Point(28, 584);
             this.label_LastName.Name = "label_LastName";
             this.label_LastName.Size = new System.Drawing.Size(84, 18);
             this.label_LastName.TabIndex = 4;
@@ -125,7 +125,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_PhoneNumber.AutoSize = true;
             this.label_PhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PhoneNumber.Location = new System.Drawing.Point(28, 648);
+            this.label_PhoneNumber.Location = new System.Drawing.Point(671, 485);
             this.label_PhoneNumber.Name = "label_PhoneNumber";
             this.label_PhoneNumber.Size = new System.Drawing.Size(112, 18);
             this.label_PhoneNumber.TabIndex = 6;
@@ -135,7 +135,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_DateEmployed.AutoSize = true;
             this.label_DateEmployed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_DateEmployed.Location = new System.Drawing.Point(28, 677);
+            this.label_DateEmployed.Location = new System.Drawing.Point(670, 519);
             this.label_DateEmployed.Name = "label_DateEmployed";
             this.label_DateEmployed.Size = new System.Drawing.Size(113, 18);
             this.label_DateEmployed.TabIndex = 7;
@@ -145,7 +145,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_Specialization.AutoSize = true;
             this.label_Specialization.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Specialization.Location = new System.Drawing.Point(28, 709);
+            this.label_Specialization.Location = new System.Drawing.Point(670, 549);
             this.label_Specialization.Name = "label_Specialization";
             this.label_Specialization.Size = new System.Drawing.Size(103, 18);
             this.label_Specialization.TabIndex = 8;
@@ -155,7 +155,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_Department.AutoSize = true;
             this.label_Department.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Department.Location = new System.Drawing.Point(28, 741);
+            this.label_Department.Location = new System.Drawing.Point(671, 577);
             this.label_Department.Name = "label_Department";
             this.label_Department.Size = new System.Drawing.Size(89, 18);
             this.label_Department.TabIndex = 9;
@@ -165,7 +165,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_Email.AutoSize = true;
             this.label_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Email.Location = new System.Drawing.Point(28, 774);
+            this.label_Email.Location = new System.Drawing.Point(670, 605);
             this.label_Email.Name = "label_Email";
             this.label_Email.Size = new System.Drawing.Size(54, 18);
             this.label_Email.TabIndex = 10;
@@ -176,21 +176,21 @@ namespace PresentationLayerDesktop
             this.textBox_Id.Location = new System.Drawing.Point(210, 492);
             this.textBox_Id.Name = "textBox_Id";
             this.textBox_Id.ReadOnly = true;
-            this.textBox_Id.Size = new System.Drawing.Size(121, 22);
+            this.textBox_Id.Size = new System.Drawing.Size(205, 22);
             this.textBox_Id.TabIndex = 11;
             // 
             // textBox_FirstName
             // 
             this.textBox_FirstName.Location = new System.Drawing.Point(210, 552);
             this.textBox_FirstName.Name = "textBox_FirstName";
-            this.textBox_FirstName.Size = new System.Drawing.Size(121, 22);
+            this.textBox_FirstName.Size = new System.Drawing.Size(205, 22);
             this.textBox_FirstName.TabIndex = 13;
             // 
             // textBox_LastName
             // 
             this.textBox_LastName.Location = new System.Drawing.Point(210, 580);
             this.textBox_LastName.Name = "textBox_LastName";
-            this.textBox_LastName.Size = new System.Drawing.Size(121, 22);
+            this.textBox_LastName.Size = new System.Drawing.Size(205, 22);
             this.textBox_LastName.TabIndex = 14;
             // 
             // textBox_PersonalNumber
@@ -198,41 +198,41 @@ namespace PresentationLayerDesktop
             this.textBox_PersonalNumber.Location = new System.Drawing.Point(210, 611);
             this.textBox_PersonalNumber.Name = "textBox_PersonalNumber";
             this.textBox_PersonalNumber.ReadOnly = true;
-            this.textBox_PersonalNumber.Size = new System.Drawing.Size(121, 22);
+            this.textBox_PersonalNumber.Size = new System.Drawing.Size(205, 22);
             this.textBox_PersonalNumber.TabIndex = 15;
             // 
             // textBox_PhoneNumber
             // 
-            this.textBox_PhoneNumber.Location = new System.Drawing.Point(210, 643);
+            this.textBox_PhoneNumber.Location = new System.Drawing.Point(807, 481);
             this.textBox_PhoneNumber.Name = "textBox_PhoneNumber";
-            this.textBox_PhoneNumber.Size = new System.Drawing.Size(121, 22);
+            this.textBox_PhoneNumber.Size = new System.Drawing.Size(205, 22);
             this.textBox_PhoneNumber.TabIndex = 16;
             // 
             // textBox_DateEmployed
             // 
-            this.textBox_DateEmployed.Location = new System.Drawing.Point(210, 672);
+            this.textBox_DateEmployed.Location = new System.Drawing.Point(807, 514);
             this.textBox_DateEmployed.Name = "textBox_DateEmployed";
             this.textBox_DateEmployed.ReadOnly = true;
-            this.textBox_DateEmployed.Size = new System.Drawing.Size(121, 22);
+            this.textBox_DateEmployed.Size = new System.Drawing.Size(205, 22);
             this.textBox_DateEmployed.TabIndex = 17;
             // 
             // textBox_Specialization
             // 
-            this.textBox_Specialization.Location = new System.Drawing.Point(210, 704);
+            this.textBox_Specialization.Location = new System.Drawing.Point(807, 546);
             this.textBox_Specialization.Name = "textBox_Specialization";
-            this.textBox_Specialization.Size = new System.Drawing.Size(121, 22);
+            this.textBox_Specialization.Size = new System.Drawing.Size(205, 22);
             this.textBox_Specialization.TabIndex = 18;
             // 
             // textBox_Department
             // 
-            this.textBox_Department.Location = new System.Drawing.Point(210, 736);
+            this.textBox_Department.Location = new System.Drawing.Point(807, 574);
             this.textBox_Department.Name = "textBox_Department";
-            this.textBox_Department.Size = new System.Drawing.Size(121, 22);
+            this.textBox_Department.Size = new System.Drawing.Size(205, 22);
             this.textBox_Department.TabIndex = 19;
             // 
             // textBox_Email
             // 
-            this.textBox_Email.Location = new System.Drawing.Point(210, 770);
+            this.textBox_Email.Location = new System.Drawing.Point(807, 602);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(205, 22);
             this.textBox_Email.TabIndex = 20;
@@ -245,7 +245,7 @@ namespace PresentationLayerDesktop
             "Inactive"});
             this.comboBox_Status.Location = new System.Drawing.Point(210, 519);
             this.comboBox_Status.Name = "comboBox_Status";
-            this.comboBox_Status.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_Status.Size = new System.Drawing.Size(205, 24);
             this.comboBox_Status.TabIndex = 21;
             // 
             // button_Update
@@ -253,9 +253,9 @@ namespace PresentationLayerDesktop
             this.button_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Update.ForeColor = System.Drawing.Color.White;
-            this.button_Update.Location = new System.Drawing.Point(547, 546);
+            this.button_Update.Location = new System.Drawing.Point(1364, 477);
             this.button_Update.Name = "button_Update";
-            this.button_Update.Size = new System.Drawing.Size(120, 35);
+            this.button_Update.Size = new System.Drawing.Size(137, 46);
             this.button_Update.TabIndex = 22;
             this.button_Update.Text = "Update";
             this.button_Update.UseVisualStyleBackColor = false;
@@ -266,9 +266,9 @@ namespace PresentationLayerDesktop
             this.button_InsertNewDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_InsertNewDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_InsertNewDoctor.ForeColor = System.Drawing.Color.White;
-            this.button_InsertNewDoctor.Location = new System.Drawing.Point(533, 598);
+            this.button_InsertNewDoctor.Location = new System.Drawing.Point(1364, 529);
             this.button_InsertNewDoctor.Name = "button_InsertNewDoctor";
-            this.button_InsertNewDoctor.Size = new System.Drawing.Size(153, 54);
+            this.button_InsertNewDoctor.Size = new System.Drawing.Size(137, 54);
             this.button_InsertNewDoctor.TabIndex = 23;
             this.button_InsertNewDoctor.Text = "Insert New Doctor";
             this.button_InsertNewDoctor.UseVisualStyleBackColor = false;
@@ -279,9 +279,9 @@ namespace PresentationLayerDesktop
             this.button_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Close.ForeColor = System.Drawing.Color.White;
-            this.button_Close.Location = new System.Drawing.Point(564, 677);
+            this.button_Close.Location = new System.Drawing.Point(1364, 587);
             this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(90, 34);
+            this.button_Close.Size = new System.Drawing.Size(137, 46);
             this.button_Close.TabIndex = 24;
             this.button_Close.Text = "Close";
             this.button_Close.UseVisualStyleBackColor = false;
@@ -291,7 +291,7 @@ namespace PresentationLayerDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 844);
+            this.ClientSize = new System.Drawing.Size(1924, 644);
             this.Controls.Add(this.button_Close);
             this.Controls.Add(this.button_InsertNewDoctor);
             this.Controls.Add(this.button_Update);

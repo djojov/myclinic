@@ -209,20 +209,20 @@ namespace PresentationLayerDesktop
             // 
             this.textBox_Weight.Location = new System.Drawing.Point(211, 254);
             this.textBox_Weight.Name = "textBox_Weight";
-            this.textBox_Weight.Size = new System.Drawing.Size(53, 22);
+            this.textBox_Weight.Size = new System.Drawing.Size(108, 22);
             this.textBox_Weight.TabIndex = 17;
             // 
             // textBox_Height
             // 
             this.textBox_Height.Location = new System.Drawing.Point(211, 281);
             this.textBox_Height.Name = "textBox_Height";
-            this.textBox_Height.Size = new System.Drawing.Size(53, 22);
+            this.textBox_Height.Size = new System.Drawing.Size(108, 22);
             this.textBox_Height.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(270, 259);
+            this.label1.Location = new System.Drawing.Point(328, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 17);
             this.label1.TabIndex = 19;
@@ -231,7 +231,7 @@ namespace PresentationLayerDesktop
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 286);
+            this.label2.Location = new System.Drawing.Point(325, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 17);
             this.label2.TabIndex = 20;

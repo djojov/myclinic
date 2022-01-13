@@ -104,7 +104,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_HealthInsuranceNumber.AutoSize = true;
             this.label_HealthInsuranceNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_HealthInsuranceNumber.Location = new System.Drawing.Point(21, 583);
+            this.label_HealthInsuranceNumber.Location = new System.Drawing.Point(327, 496);
             this.label_HealthInsuranceNumber.Name = "label_HealthInsuranceNumber";
             this.label_HealthInsuranceNumber.Size = new System.Drawing.Size(179, 18);
             this.label_HealthInsuranceNumber.TabIndex = 4;
@@ -114,7 +114,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_DateOfBirth.AutoSize = true;
             this.label_DateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_DateOfBirth.Location = new System.Drawing.Point(21, 612);
+            this.label_DateOfBirth.Location = new System.Drawing.Point(327, 525);
             this.label_DateOfBirth.Name = "label_DateOfBirth";
             this.label_DateOfBirth.Size = new System.Drawing.Size(94, 18);
             this.label_DateOfBirth.TabIndex = 5;
@@ -124,7 +124,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_PlaceOfBirth.AutoSize = true;
             this.label_PlaceOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PlaceOfBirth.Location = new System.Drawing.Point(21, 640);
+            this.label_PlaceOfBirth.Location = new System.Drawing.Point(327, 553);
             this.label_PlaceOfBirth.Name = "label_PlaceOfBirth";
             this.label_PlaceOfBirth.Size = new System.Drawing.Size(100, 18);
             this.label_PlaceOfBirth.TabIndex = 6;
@@ -134,7 +134,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_PhoneNumber.AutoSize = true;
             this.label_PhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PhoneNumber.Location = new System.Drawing.Point(21, 671);
+            this.label_PhoneNumber.Location = new System.Drawing.Point(713, 492);
             this.label_PhoneNumber.Name = "label_PhoneNumber";
             this.label_PhoneNumber.Size = new System.Drawing.Size(112, 18);
             this.label_PhoneNumber.TabIndex = 8;
@@ -144,7 +144,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_Weight.AutoSize = true;
             this.label_Weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Weight.Location = new System.Drawing.Point(21, 700);
+            this.label_Weight.Location = new System.Drawing.Point(713, 521);
             this.label_Weight.Name = "label_Weight";
             this.label_Weight.Size = new System.Drawing.Size(58, 18);
             this.label_Weight.TabIndex = 9;
@@ -154,7 +154,7 @@ namespace PresentationLayerDesktop
             // 
             this.label_Height.AutoSize = true;
             this.label_Height.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Height.Location = new System.Drawing.Point(21, 725);
+            this.label_Height.Location = new System.Drawing.Point(713, 546);
             this.label_Height.Name = "label_Height";
             this.label_Height.Size = new System.Drawing.Size(54, 18);
             this.label_Height.TabIndex = 10;
@@ -163,7 +163,7 @@ namespace PresentationLayerDesktop
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(345, 697);
+            this.label1.Location = new System.Drawing.Point(976, 519);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 17);
             this.label1.TabIndex = 11;
@@ -172,7 +172,7 @@ namespace PresentationLayerDesktop
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(345, 725);
+            this.label2.Location = new System.Drawing.Point(976, 547);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 17);
             this.label2.TabIndex = 12;
@@ -180,58 +180,58 @@ namespace PresentationLayerDesktop
             // 
             // textBox_FirstName
             // 
-            this.textBox_FirstName.Location = new System.Drawing.Point(242, 494);
+            this.textBox_FirstName.Location = new System.Drawing.Point(159, 496);
             this.textBox_FirstName.Name = "textBox_FirstName";
             this.textBox_FirstName.Size = new System.Drawing.Size(137, 22);
             this.textBox_FirstName.TabIndex = 13;
             // 
             // textBox_LastName
             // 
-            this.textBox_LastName.Location = new System.Drawing.Point(242, 522);
+            this.textBox_LastName.Location = new System.Drawing.Point(159, 522);
             this.textBox_LastName.Name = "textBox_LastName";
             this.textBox_LastName.Size = new System.Drawing.Size(137, 22);
             this.textBox_LastName.TabIndex = 14;
             // 
             // textBox_PersonalNumber
             // 
-            this.textBox_PersonalNumber.Location = new System.Drawing.Point(242, 550);
+            this.textBox_PersonalNumber.Location = new System.Drawing.Point(159, 551);
             this.textBox_PersonalNumber.Name = "textBox_PersonalNumber";
             this.textBox_PersonalNumber.Size = new System.Drawing.Size(137, 22);
             this.textBox_PersonalNumber.TabIndex = 15;
             // 
             // textBox_HealthInsuranceNumber
             // 
-            this.textBox_HealthInsuranceNumber.Location = new System.Drawing.Point(242, 578);
+            this.textBox_HealthInsuranceNumber.Location = new System.Drawing.Point(548, 491);
             this.textBox_HealthInsuranceNumber.Name = "textBox_HealthInsuranceNumber";
             this.textBox_HealthInsuranceNumber.Size = new System.Drawing.Size(137, 22);
             this.textBox_HealthInsuranceNumber.TabIndex = 16;
             // 
             // textBox_PlaceOfBirth
             // 
-            this.textBox_PlaceOfBirth.Location = new System.Drawing.Point(242, 635);
+            this.textBox_PlaceOfBirth.Location = new System.Drawing.Point(548, 548);
             this.textBox_PlaceOfBirth.Name = "textBox_PlaceOfBirth";
             this.textBox_PlaceOfBirth.Size = new System.Drawing.Size(137, 22);
             this.textBox_PlaceOfBirth.TabIndex = 17;
             // 
             // textBox_PhoneNumber
             // 
-            this.textBox_PhoneNumber.Location = new System.Drawing.Point(242, 662);
+            this.textBox_PhoneNumber.Location = new System.Drawing.Point(862, 488);
             this.textBox_PhoneNumber.Name = "textBox_PhoneNumber";
             this.textBox_PhoneNumber.Size = new System.Drawing.Size(137, 22);
             this.textBox_PhoneNumber.TabIndex = 19;
             // 
             // textBox_Weight
             // 
-            this.textBox_Weight.Location = new System.Drawing.Point(242, 692);
+            this.textBox_Weight.Location = new System.Drawing.Point(862, 513);
             this.textBox_Weight.Name = "textBox_Weight";
-            this.textBox_Weight.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Weight.Size = new System.Drawing.Size(108, 22);
             this.textBox_Weight.TabIndex = 20;
             // 
             // textBox_Height
             // 
-            this.textBox_Height.Location = new System.Drawing.Point(242, 720);
+            this.textBox_Height.Location = new System.Drawing.Point(862, 542);
             this.textBox_Height.Name = "textBox_Height";
-            this.textBox_Height.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Height.Size = new System.Drawing.Size(108, 22);
             this.textBox_Height.TabIndex = 21;
             // 
             // button_UpdatePatient
@@ -239,9 +239,9 @@ namespace PresentationLayerDesktop
             this.button_UpdatePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_UpdatePatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_UpdatePatient.ForeColor = System.Drawing.Color.White;
-            this.button_UpdatePatient.Location = new System.Drawing.Point(603, 494);
+            this.button_UpdatePatient.Location = new System.Drawing.Point(247, 609);
             this.button_UpdatePatient.Name = "button_UpdatePatient";
-            this.button_UpdatePatient.Size = new System.Drawing.Size(130, 50);
+            this.button_UpdatePatient.Size = new System.Drawing.Size(144, 47);
             this.button_UpdatePatient.TabIndex = 23;
             this.button_UpdatePatient.Text = "Update Patient";
             this.button_UpdatePatient.UseVisualStyleBackColor = false;
@@ -252,9 +252,9 @@ namespace PresentationLayerDesktop
             this.button_InsertPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_InsertPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_InsertPatient.ForeColor = System.Drawing.Color.White;
-            this.button_InsertPatient.Location = new System.Drawing.Point(603, 550);
+            this.button_InsertPatient.Location = new System.Drawing.Point(24, 609);
             this.button_InsertPatient.Name = "button_InsertPatient";
-            this.button_InsertPatient.Size = new System.Drawing.Size(130, 47);
+            this.button_InsertPatient.Size = new System.Drawing.Size(144, 47);
             this.button_InsertPatient.TabIndex = 24;
             this.button_InsertPatient.Text = "Insert New Patient";
             this.button_InsertPatient.UseVisualStyleBackColor = false;
@@ -265,9 +265,9 @@ namespace PresentationLayerDesktop
             this.button_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Close.ForeColor = System.Drawing.Color.White;
-            this.button_Close.Location = new System.Drawing.Point(603, 706);
+            this.button_Close.Location = new System.Drawing.Point(898, 609);
             this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(130, 36);
+            this.button_Close.Size = new System.Drawing.Size(144, 47);
             this.button_Close.TabIndex = 25;
             this.button_Close.Text = "Close";
             this.button_Close.UseVisualStyleBackColor = false;
@@ -276,7 +276,7 @@ namespace PresentationLayerDesktop
             // dateTimePicker_DateOfBirth
             // 
             this.dateTimePicker_DateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_DateOfBirth.Location = new System.Drawing.Point(242, 606);
+            this.dateTimePicker_DateOfBirth.Location = new System.Drawing.Point(548, 519);
             this.dateTimePicker_DateOfBirth.Name = "dateTimePicker_DateOfBirth";
             this.dateTimePicker_DateOfBirth.Size = new System.Drawing.Size(137, 22);
             this.dateTimePicker_DateOfBirth.TabIndex = 26;
@@ -286,9 +286,9 @@ namespace PresentationLayerDesktop
             this.button_InsertReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_InsertReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_InsertReport.ForeColor = System.Drawing.Color.White;
-            this.button_InsertReport.Location = new System.Drawing.Point(603, 603);
+            this.button_InsertReport.Location = new System.Drawing.Point(472, 610);
             this.button_InsertReport.Name = "button_InsertReport";
-            this.button_InsertReport.Size = new System.Drawing.Size(130, 46);
+            this.button_InsertReport.Size = new System.Drawing.Size(144, 47);
             this.button_InsertReport.TabIndex = 27;
             this.button_InsertReport.Text = "Insert Report";
             this.button_InsertReport.UseVisualStyleBackColor = false;
@@ -299,9 +299,9 @@ namespace PresentationLayerDesktop
             this.button_ViewReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_ViewReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ViewReport.ForeColor = System.Drawing.Color.White;
-            this.button_ViewReport.Location = new System.Drawing.Point(603, 654);
+            this.button_ViewReport.Location = new System.Drawing.Point(695, 609);
             this.button_ViewReport.Name = "button_ViewReport";
-            this.button_ViewReport.Size = new System.Drawing.Size(130, 46);
+            this.button_ViewReport.Size = new System.Drawing.Size(144, 47);
             this.button_ViewReport.TabIndex = 28;
             this.button_ViewReport.Text = "View Reports";
             this.button_ViewReport.UseVisualStyleBackColor = false;
@@ -311,7 +311,7 @@ namespace PresentationLayerDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 751);
+            this.ClientSize = new System.Drawing.Size(1054, 673);
             this.Controls.Add(this.button_ViewReport);
             this.Controls.Add(this.button_InsertReport);
             this.Controls.Add(this.dateTimePicker_DateOfBirth);

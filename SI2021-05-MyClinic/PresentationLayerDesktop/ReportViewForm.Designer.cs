@@ -37,6 +37,7 @@ namespace PresentationLayerDesktop
             this.textBox_PatientPersonalNumber = new System.Windows.Forms.TextBox();
             this.listBox_ReportList = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_Reports = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@ namespace PresentationLayerDesktop
             this.button_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.button_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Close.ForeColor = System.Drawing.Color.White;
-            this.button_Close.Location = new System.Drawing.Point(426, 399);
+            this.button_Close.Location = new System.Drawing.Point(425, 418);
             this.button_Close.Name = "button_Close";
             this.button_Close.Size = new System.Drawing.Size(120, 47);
             this.button_Close.TabIndex = 1;
@@ -56,7 +57,7 @@ namespace PresentationLayerDesktop
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 88);
+            this.label1.Location = new System.Drawing.Point(23, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 18);
             this.label1.TabIndex = 2;
@@ -64,7 +65,7 @@ namespace PresentationLayerDesktop
             // 
             // textBox_PatientFullName
             // 
-            this.textBox_PatientFullName.Location = new System.Drawing.Point(160, 82);
+            this.textBox_PatientFullName.Location = new System.Drawing.Point(159, 27);
             this.textBox_PatientFullName.Name = "textBox_PatientFullName";
             this.textBox_PatientFullName.ReadOnly = true;
             this.textBox_PatientFullName.Size = new System.Drawing.Size(237, 24);
@@ -73,7 +74,7 @@ namespace PresentationLayerDesktop
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 126);
+            this.label2.Location = new System.Drawing.Point(23, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 18);
             this.label2.TabIndex = 4;
@@ -81,7 +82,7 @@ namespace PresentationLayerDesktop
             // 
             // textBox_PatientPersonalNumber
             // 
-            this.textBox_PatientPersonalNumber.Location = new System.Drawing.Point(222, 120);
+            this.textBox_PatientPersonalNumber.Location = new System.Drawing.Point(221, 89);
             this.textBox_PatientPersonalNumber.Name = "textBox_PatientPersonalNumber";
             this.textBox_PatientPersonalNumber.ReadOnly = true;
             this.textBox_PatientPersonalNumber.Size = new System.Drawing.Size(175, 24);
@@ -91,7 +92,7 @@ namespace PresentationLayerDesktop
             // 
             this.listBox_ReportList.FormattingEnabled = true;
             this.listBox_ReportList.ItemHeight = 18;
-            this.listBox_ReportList.Location = new System.Drawing.Point(27, 159);
+            this.listBox_ReportList.Location = new System.Drawing.Point(26, 168);
             this.listBox_ReportList.Name = "listBox_ReportList";
             this.listBox_ReportList.Size = new System.Drawing.Size(519, 220);
             this.listBox_ReportList.TabIndex = 6;
@@ -99,18 +100,28 @@ namespace PresentationLayerDesktop
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PresentationLayerDesktop.Properties.Resources.mcsPNG;
-            this.pictureBox1.Location = new System.Drawing.Point(403, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(425, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 132);
+            this.pictureBox1.Size = new System.Drawing.Size(120, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // label_Reports
+            // 
+            this.label_Reports.AutoSize = true;
+            this.label_Reports.Location = new System.Drawing.Point(23, 136);
+            this.label_Reports.Name = "label_Reports";
+            this.label_Reports.Size = new System.Drawing.Size(65, 18);
+            this.label_Reports.TabIndex = 8;
+            this.label_Reports.Text = "Reports:";
             // 
             // ReportViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 454);
+            this.ClientSize = new System.Drawing.Size(564, 484);
+            this.Controls.Add(this.label_Reports);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listBox_ReportList);
             this.Controls.Add(this.textBox_PatientPersonalNumber);
@@ -138,5 +149,6 @@ namespace PresentationLayerDesktop
         private System.Windows.Forms.TextBox textBox_PatientPersonalNumber;
         private System.Windows.Forms.ListBox listBox_ReportList;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_Reports;
     }
 }
