@@ -64,7 +64,28 @@ namespace DoctorRepositoryTests
             int result = doctorRepository.UpdatePatient(newPatient);
             Assert.IsTrue(result > 0);
         }
-
+        [TestMethod]
+        public void InsertPatientTest()
+        {
+            int result = doctorRepository.InsertPatient(patient);
+            Assert.IsTrue(result > 0);
+        }
+        [TestMethod]
+        public void GetDoctorTest()
+        {
+            doctorRepository.InsertPatient(patient);
+            Doctor newDoctor = doctorRepository.GetDoctor("urosmilosevic@myclinic.com", "Password123@");
+            Assert.AreEqual(newDoctor.Id, newDoctor.Id);
+            Assert.AreEqual(newDoctor.Status, newDoctor.Status);
+            Assert.AreEqual(newDoctor.FirstName, newDoctor.FirstName);
+            Assert.AreEqual(newDoctor.LastName, newDoctor.LastName);
+            Assert.AreEqual(newDoctor.PhoneNumber, newDoctor.PhoneNumber);
+            Assert.AreEqual(newDoctor.DateEmployed, newDoctor.DateEmployed);
+            Assert.AreEqual(newDoctor.Specialization, newDoctor.Specialization);
+            Assert.AreEqual(newDoctor.Department, newDoctor.Department);
+            Assert.AreEqual(newDoctor.Email, newDoctor.Email);
+            Assert.AreEqual(newDoctor.Password, newDoctor.Password);
+        }
         [TestCleanup]
         public void Clean()
         {
