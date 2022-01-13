@@ -86,6 +86,7 @@ namespace DoctorRepositoryTests
             Assert.AreEqual(newDoctor.Email, newDoctor.Email);
             Assert.AreEqual(newDoctor.Password, newDoctor.Password);
         }
+
         [TestCleanup]
         public void Clean()
         {

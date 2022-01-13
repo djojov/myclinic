@@ -69,7 +69,7 @@ namespace AdminBusinessTests
             Assert.AreEqual(2, result.Count);
         }
         [TestMethod]
-        public void isDoctorInserted()
+        public void IsDoctorInserted()
         {
             mockAdminRepository.Setup(x => x.InsertDoctor(doctor)).Returns(1);
             this.adminBusiness = new AdminBusiness(mockAdminRepository.Object);
@@ -79,7 +79,7 @@ namespace AdminBusinessTests
             Assert.AreEqual(result, "Doctor successfully added!");
         }
         [TestMethod]
-        public void isDoctorUpdated()
+        public void IsDoctorUpdated()
         {
             mockAdminRepository.Setup(x => x.UpdateDoctor(doctor)).Returns(1);
             this.adminBusiness = new AdminBusiness(mockAdminRepository.Object);
@@ -90,7 +90,7 @@ namespace AdminBusinessTests
         }
 
         [TestMethod]
-        public void ifGottenAdmin()
+        public void IfGottenAdmin()
         {
             mockAdminRepository.Setup(x => x.GetAdmin(admin.Email, admin.Password)).Returns(new Admin { 
                 Id = 1,
