@@ -90,7 +90,7 @@
                     <small class="form-text text-danger"><asp:RegularExpressionValidator ID="RegularExpressionValidator_Height" runat="server" ErrorMessage="Height entered incorrectly!" Text="Height entered incorrectly!" ControlToValidate="TextBox_Height" ValidationExpression="^[0-9]*[1-9][0-9]*$"></asp:RegularExpressionValidator></small>
                 </div>
                 <div class="form-group row">
-                    <asp:Button CssClass="btn btn-primary" OnClick="Button_UpdatePatient_Click" ID="Button_UpdatePatient" Text="Update patient" runat="server" />
+                    <asp:Button CssClass="btn btn-primary" OnClick="Button_UpdatePatient_Click" ID="Button_UpdatePatient" Text="Update patient" runat="server" />  <span> or </span> <asp:Button CssClass="btn btn-primary" ID="Button_InsertPatient" Text="Insert new patient" OnClick="Button_InsertPatient_Click" runat="server" />
                 </div>
             </div>
             <div class="col-1"></div>

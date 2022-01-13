@@ -116,5 +116,12 @@ namespace PresentationLayerWeb
                 TextArea_PDiagnosis.Value = "";
             }
         }
+
+        protected void Button_InsertPatient_Click(object sender, EventArgs e)
+        {
+            string url = "InsertPatient.aspx";
+            string s = "window.open('" + url + "', 'popup_window', 'width=1024,height=800,left=100,top=100,resizable=yes');";
+            ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
+        }
     }
 }
