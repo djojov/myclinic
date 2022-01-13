@@ -14,6 +14,6 @@ namespace Shared.Interfaces
         int InsertPatient(Patient patient);
         Doctor GetDoctor(string email, string password);
         int InsertReport(int doctor_id, int patient_id, string diagnosis);
-        int DeleteReport(int doctor_id, int patient_id, string diagnosis);
+        int DeletePatient(int id);
     }
 }
