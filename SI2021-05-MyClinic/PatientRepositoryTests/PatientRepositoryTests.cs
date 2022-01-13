@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shared.Interfaces;
 using Shared.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PatientRepositoryTests
@@ -29,7 +30,7 @@ namespace PatientRepositoryTests
                 PlaceOfBirth = "Boljevac",
                 Email = "somemail@gmail.com",
                 Password = "Password123@",
-                PhoneNumber = "0699999999",
+                PhoneNumber = "0688888888",
                 Weight = "100",
                 Height = "190"
             };
@@ -68,6 +69,13 @@ namespace PatientRepositoryTests
             Assert.AreEqual(patient.PhoneNumber, patient.PhoneNumber);
             Assert.AreEqual(patient.Weight, patient.Weight);
             Assert.AreEqual(patient.Height, patient.Height);
+        }
+        [TestMethod]
+        public void GetReportDataTest()
+        {
+            doctorRepository.InsertPatient(patient);
+            List<string> result = patientRepository.GetReportData(3);
+            Assert.IsNotNull(result[0]);
         }
         [TestCleanup]
         public void Clean()
