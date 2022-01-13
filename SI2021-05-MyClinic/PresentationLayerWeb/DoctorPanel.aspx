@@ -19,9 +19,6 @@
                         <asp:HyperLink CssClass="nav-link" ID="HyperLink3" runat="server" NavigateUrl="~/InsertPatient.aspx">Insert patient</asp:HyperLink>
                       </li>
                         <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" ID="HyperLink5" runat="server" NavigateUrl="~/InsertReport.aspx">Insert report</asp:HyperLink>
-                      </li>
-                        <li class="nav-item">
                         <asp:HyperLink CssClass="nav-link" ID="HyperLink4" runat="server" NavigateUrl="~/Login.aspx">Log out</asp:HyperLink>
                       </li>
                     </ul>

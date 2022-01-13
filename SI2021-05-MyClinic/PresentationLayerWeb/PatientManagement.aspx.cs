@@ -38,6 +38,10 @@ namespace PresentationLayerWeb
         {
             if (!IsPostBack)
             {
+                if (Session["Doctor"] == null)
+                {
+                    Response.Redirect("~/Login.aspx");
+                }
                 var doctor = (Doctor)Session["Doctor"];
                 List<Patient> patientList = doctorBusiness.GetAllPatients();
                 GridView_PatientList.DataSource = patientList;

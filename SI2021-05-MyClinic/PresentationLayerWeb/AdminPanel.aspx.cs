@@ -33,6 +33,10 @@ namespace PresentationLayerWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["Admin"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
             var admin = (Admin)Session["Admin"];
             TextBox_FirstName.Text = admin.FirstName;
             TextBox_LastName.Text = admin.LastName;
