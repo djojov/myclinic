@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,6 +44,12 @@ namespace PresentationLayerDesktop
             if(richTextBox_Diagnosis.Text == "")
             {
                 MessageBox.Show("You have to fill out all of the fields", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                richTextBox_Diagnosis.Focus();
+                return;
+            }
+            else if (!Regex.Match(richTextBox_Diagnosis.Text, @"^[a-zA-Z\s-.,0-9]{1,200}$").Success)
+            {
+                MessageBox.Show("Diagnosis entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 richTextBox_Diagnosis.Focus();
                 return;
             }

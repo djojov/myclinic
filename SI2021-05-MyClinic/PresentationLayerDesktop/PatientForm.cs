@@ -91,7 +91,7 @@ namespace PresentationLayerDesktop
                     patient.Password = patient.Password;
                 }
             }
-            else if (!Regex.Match(textBox_PhoneNumber.Text, @"^[0][6]\d{1}[1-9]\d{2,3}\d{3,4}$").Success)
+            else if (!Regex.Match(textBox_PhoneNumber.Text, @"^[0][6]\d{7,8}$").Success)
             {
                 MessageBox.Show("Phone number entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_PhoneNumber.Focus();
@@ -105,13 +105,13 @@ namespace PresentationLayerDesktop
                 textBox_Password.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Weight.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            else if (!Regex.Match(textBox_Weight.Text, @"^[1-9]{0,1}[0-9]{1,2}$").Success )
             {
                 MessageBox.Show("Weight cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Weight.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Height.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            else if (!Regex.Match(textBox_Height.Text, @"^[1-9]{0,1}[0-9]{1,2}$").Success)
             {
                 MessageBox.Show("Height cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Height.Focus();
@@ -141,13 +141,13 @@ namespace PresentationLayerDesktop
                 textBox_Weight.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Weight.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            else if (!Regex.Match(textBox_Weight.Text, @"^[1-9]{0,1}[0-9]{1,2}$").Success)
             {
                 MessageBox.Show("Weight cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Weight.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Height.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            else if (!Regex.Match(textBox_Height.Text, @"^[1-9]{0,1}[0-9]{1,2}$").Success)
             {
                 MessageBox.Show("Height cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Height.Focus();

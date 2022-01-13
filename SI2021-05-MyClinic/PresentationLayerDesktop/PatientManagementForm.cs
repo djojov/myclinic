@@ -69,19 +69,19 @@ namespace PresentationLayerDesktop
                 textBox_FirstName.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_FirstName.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            else if (!Regex.Match(textBox_FirstName.Text, @"^[A-Z]+[A-Za-z\s]{1,15}([A-Z]?)+([A-Za-z\s]?)$").Success)
             {
                 MessageBox.Show("First name cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_FirstName.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_LastName.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            else if (!Regex.Match(textBox_LastName.Text, @"^[A-Z]+[A-Za-z\s-]{1,30}([A-Z]?)+([A-Za-z\s]?)$").Success)
             {
                 MessageBox.Show("Last name cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_LastName.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_PhoneNumber.Text, @"^[0][6]\d{1}[1-9]\d{2,3}\d{3,4}$").Success)
+            else if (!Regex.Match(textBox_PhoneNumber.Text, @"^[0][6]\d{7,8}$").Success)
             {
                 MessageBox.Show("Phone number entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_PhoneNumber.Focus();
@@ -99,7 +99,7 @@ namespace PresentationLayerDesktop
                 textBox_HealthInsuranceNumber.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_PlaceOfBirth.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            else if (!Regex.Match(textBox_PlaceOfBirth.Text, @"^[A-Z]+[A-Za-z\s]{1,20}([A-Z]?)+([A-Za-z\s]?)$").Success)
             {
                 MessageBox.Show("Place of birth cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_PlaceOfBirth.Focus();
@@ -111,13 +111,13 @@ namespace PresentationLayerDesktop
                 dateTimePicker_DateOfBirth.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Weight.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            else if (!Regex.Match(textBox_Weight.Text, @"^[1-9]{0,1}[0-9]{1,2}$").Success)
             {
                 MessageBox.Show("Weight cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Weight.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Height.Text, @"^[0-9]*[1-9][0-9]*$").Success)
+            else if (!Regex.Match(textBox_Height.Text, @"^[1-9]{0,1}[0-9]{1,2}$").Success)
             {
                 MessageBox.Show("Height cannot contain anything else but digits!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Height.Focus();

@@ -73,19 +73,19 @@ namespace PresentationLayerDesktop
                 textBox_Email.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_FirstName.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            else if (!Regex.Match(textBox_FirstName.Text, @"^[A-Z]+[A-Za-z\s]{1,15}([A-Z]?)+([A-Za-z\s]?)$").Success)
             {
                 MessageBox.Show("First name cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_FirstName.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_LastName.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            else if (!Regex.Match(textBox_LastName.Text, @"^[A-Z]+[A-Za-z\s-]{1,30}([A-Z]?)+([A-Za-z\s]?)$").Success)
             {
                 MessageBox.Show("Last name cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_LastName.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_PhoneNumber.Text, @"^[0][6]\d{1}[1-9]\d{2,3}\d{3,4}$").Success)
+            else if (!Regex.Match(textBox_PhoneNumber.Text, @"^[0][6]\d{7,8}$").Success)
             {
                 MessageBox.Show("Phone number entered incorrectly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_PhoneNumber.Focus();
@@ -97,13 +97,13 @@ namespace PresentationLayerDesktop
                 textBox_PersonalNumber.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Specialization.Text, @"^[a-zA-Z\s]*$").Success)
+            else if (!Regex.Match(textBox_Specialization.Text, @"^[a-zA-Z\s]{1,30}$").Success)
             {
                 MessageBox.Show("Specialization cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Specialization.Focus();
                 return;
             }
-            else if (!Regex.Match(textBox_Department.Text, @"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$").Success)
+            else if (!Regex.Match(textBox_Department.Text, @"^[a-zA-Z\s]{1,20}$").Success)
             {
                 MessageBox.Show("Department cannot contain a digit!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox_Department.Focus();
